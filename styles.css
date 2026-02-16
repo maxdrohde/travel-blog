@@ -145,17 +145,8 @@ div.quarto-post .metadata {
 }
 
 .post-entry p {
-    display: grid;
-    grid-template-columns: 65px 1fr;
-    gap: 0 2rem;
-    align-items: baseline;
     margin: 0;
     padding: 0.15rem 0;
-}
-
-.post-date {
-    font-size: 1rem;
-    color: #999;
 }
 
 .post-link {
