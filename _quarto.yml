@@ -4,6 +4,7 @@ project:
   pre-render: scripts/optimize-images.sh
 
 website:
+  site-url: https://maxdrohde.github.io/travel-blog/
   title: "Travel Blog"
   navbar:
     background: light
