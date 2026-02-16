@@ -131,6 +131,11 @@ div.quarto-post .metadata {
     color: #999;
 }
 
+/* Hide "Published" label, show only the date */
+.quarto-title-meta-heading {
+    display: none;
+}
+
 /* Homepage — Moving-style year-grouped post list */
 .post-year-group {
     margin-bottom: 0.5rem;

@@ -14,7 +14,8 @@ format:
       - default
       - moving.scss
     css: styles.css
-    lightbox: true
+    lightbox:
+      group: true
     toc: false
     image-lazy-loading: true
     mainfont: "IBM Plex Sans, sans-serif"
