@@ -39,11 +39,6 @@
     aspect-ratio: 3 / 2;
     object-fit: cover;
     border-radius: 0;
-    transition: transform 0.3s ease;
-}
-
-.photo-grid img:hover {
-    transform: scale(1.02);
 }
 
 /* Reset margins inside photo grids */
@@ -92,6 +87,13 @@
 
 .quarto-listing .card-title {
     font-weight: 700;
+}
+
+/* Constrain images inside column layouts */
+.columns img {
+    max-height: 400px;
+    width: 100%;
+    object-fit: cover;
 }
 
 /* Single wide image layout */
