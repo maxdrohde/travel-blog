@@ -2,7 +2,7 @@
 title: "Style Reference"
 date: 2026-02-16
 description: "A reference for all layout and formatting features available on this site."
-image: https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=800
+image: https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=800&auto=format&q=80
 ---
 
 A companion to the [Photo Grid Demo](../photo-grid-demo/index.qmd), covering everything
@@ -14,7 +14,7 @@ The `.photo-wide` class shows a single image at full content width with a max he
 500px. Good for hero-style shots within a post.
 
 ::: {.photo-wide}
-![Pont Alexandre III at dusk](https://images.unsplash.com/photo-1520939817895-060bdaf4fe1b?w=1200){group="wide" description="Pont Alexandre III at dusk."}
+![Pont Alexandre III at dusk](https://images.unsplash.com/photo-1520939817895-060bdaf4fe1b?w=1200&auto=format&q=80){group="wide" description="Pont Alexandre III at dusk." width="1200" height="800"}
 :::
 
 ## Lightbox Groups
@@ -140,7 +140,7 @@ breaking up a wall of text. Columns stack vertically on mobile.
 :::
 
 ::: {.column width="50%"}
-![Ramen](https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=400){group="cols" description="Tonkotsu ramen."}
+![Ramen](https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=400&auto=format&q=80){group="cols" description="Tonkotsu ramen."}
 :::
 ::::
 

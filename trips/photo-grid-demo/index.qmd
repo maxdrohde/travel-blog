@@ -2,7 +2,7 @@
 title: "Photo Grid Demo"
 date: 2026-02-16
 description: "Demonstrating all 6 column layouts for the photo grid."
-image: https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=800
+image: https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=800&auto=format&q=80
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Showing `.cols-1` through `.cols-6` on the photo grid, including multi-row grids and grids that don't fill the last row.
@@ -10,67 +10,67 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Showing `.cols-1` throu
 ## 1 Column
 
 ::: {.photo-grid .cols-1}
-![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600){group="demo"}
+![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600&auto=format&q=80){group="demo"}
 :::
 
 ## 2 Columns
 
 ::: {.photo-grid .cols-2}
-![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600){group="demo"}
+![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600&auto=format&q=80){group="demo"}
 
-![Temple gate](https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600){group="demo"}
+![Temple gate](https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&auto=format&q=80){group="demo"}
 :::
 
 ## 3 Columns
 
 ::: {.photo-grid .cols-3}
-![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600){group="demo"}
+![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600&auto=format&q=80){group="demo"}
 
-![Temple gate](https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600){group="demo"}
+![Temple gate](https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&auto=format&q=80){group="demo"}
 
-![Neon at night](https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=600){group="demo"}
+![Neon at night](https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=600&auto=format&q=80){group="demo"}
 :::
 
 ## 4 Columns (default)
 
 ::: {.photo-grid}
-![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600){group="demo"}
+![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600&auto=format&q=80){group="demo"}
 
-![Temple gate](https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600){group="demo"}
+![Temple gate](https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&auto=format&q=80){group="demo"}
 
-![Neon at night](https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=600){group="demo"}
+![Neon at night](https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=600&auto=format&q=80){group="demo"}
 
-![Ramen](https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=600){group="demo"}
+![Ramen](https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=600&auto=format&q=80){group="demo"}
 :::
 
 ## 5 Columns
 
 ::: {.photo-grid .cols-5}
-![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600){group="demo"}
+![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600&auto=format&q=80){group="demo"}
 
-![Temple gate](https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600){group="demo"}
+![Temple gate](https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&auto=format&q=80){group="demo"}
 
-![Neon at night](https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=600){group="demo"}
+![Neon at night](https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=600&auto=format&q=80){group="demo"}
 
-![Ramen](https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=600){group="demo"}
+![Ramen](https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=600&auto=format&q=80){group="demo"}
 
-![Tokyo Tower](https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=600){group="demo"}
+![Tokyo Tower](https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=600&auto=format&q=80){group="demo"}
 :::
 
 ## 6 Columns
 
 ::: {.photo-grid .cols-6}
-![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600){group="demo"}
+![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600&auto=format&q=80){group="demo"}
 
-![Temple gate](https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600){group="demo"}
+![Temple gate](https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&auto=format&q=80){group="demo"}
 
-![Neon at night](https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=600){group="demo"}
+![Neon at night](https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=600&auto=format&q=80){group="demo"}
 
-![Ramen](https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=600){group="demo"}
+![Ramen](https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=600&auto=format&q=80){group="demo"}
 
-![Tokyo Tower](https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=600){group="demo"}
+![Tokyo Tower](https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=600&auto=format&q=80){group="demo"}
 
-![Train platform](https://images.unsplash.com/photo-1565618754154-c8011e5df2a6?w=600){group="demo"}
+![Train platform](https://images.unsplash.com/photo-1565618754154-c8011e5df2a6?w=600&auto=format&q=80){group="demo"}
 :::
 
 ## Multi-Row Grids
@@ -78,45 +78,45 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Showing `.cols-1` throu
 ### 3 columns, 2 full rows (6 images)
 
 ::: {.photo-grid .cols-3}
-![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600){group="multi"}
+![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600&auto=format&q=80){group="multi"}
 
-![Temple gate](https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600){group="multi"}
+![Temple gate](https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&auto=format&q=80){group="multi"}
 
-![Neon at night](https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=600){group="multi"}
+![Neon at night](https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=600&auto=format&q=80){group="multi"}
 
-![Ramen](https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=600){group="multi"}
+![Ramen](https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=600&auto=format&q=80){group="multi"}
 
-![Tokyo Tower](https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=600){group="multi"}
+![Tokyo Tower](https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=600&auto=format&q=80){group="multi"}
 
-![Train platform](https://images.unsplash.com/photo-1565618754154-c8011e5df2a6?w=600){group="multi"}
+![Train platform](https://images.unsplash.com/photo-1565618754154-c8011e5df2a6?w=600&auto=format&q=80){group="multi"}
 :::
 
 ### 4 columns, 3 rows (12 images)
 
 ::: {.photo-grid}
-![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600){group="multi"}
+![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600&auto=format&q=80){group="multi"}
 
-![Temple gate](https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600){group="multi"}
+![Temple gate](https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&auto=format&q=80){group="multi"}
 
-![Neon at night](https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=600){group="multi"}
+![Neon at night](https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=600&auto=format&q=80){group="multi"}
 
-![Ramen](https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=600){group="multi"}
+![Ramen](https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=600&auto=format&q=80){group="multi"}
 
-![Tokyo Tower](https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=600){group="multi"}
+![Tokyo Tower](https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=600&auto=format&q=80){group="multi"}
 
-![Train platform](https://images.unsplash.com/photo-1565618754154-c8011e5df2a6?w=600){group="multi"}
+![Train platform](https://images.unsplash.com/photo-1565618754154-c8011e5df2a6?w=600&auto=format&q=80){group="multi"}
 
-![Tsukiji market](https://images.unsplash.com/photo-1553621042-f6e147245754?w=600){group="multi"}
+![Tsukiji market](https://images.unsplash.com/photo-1553621042-f6e147245754?w=600&auto=format&q=80){group="multi"}
 
-![Akihabara](https://images.unsplash.com/photo-1480796927426-f609979314bd?w=600){group="multi"}
+![Akihabara](https://images.unsplash.com/photo-1480796927426-f609979314bd?w=600&auto=format&q=80){group="multi"}
 
-![Garden path](https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?w=600){group="multi"}
+![Garden path](https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?w=600&auto=format&q=80){group="multi"}
 
-![Side street](https://images.unsplash.com/photo-1554797589-7241bb691973?w=600){group="multi"}
+![Side street](https://images.unsplash.com/photo-1554797589-7241bb691973?w=600&auto=format&q=80){group="multi"}
 
-![Temple detail](https://images.unsplash.com/photo-1504109586057-7a2ae83d1338?w=600){group="multi"}
+![Temple detail](https://images.unsplash.com/photo-1504109586057-7a2ae83d1338?w=600&auto=format&q=80){group="multi"}
 
-![Pond reflection](https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=600){group="multi"}
+![Pond reflection](https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=600&auto=format&q=80){group="multi"}
 :::
 
 ## Incomplete Last Row
@@ -124,65 +124,65 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Showing `.cols-1` throu
 ### 3 columns, 5 images (last row has 2)
 
 ::: {.photo-grid .cols-3}
-![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600){group="partial"}
+![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600&auto=format&q=80){group="partial"}
 
-![Temple gate](https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600){group="partial"}
+![Temple gate](https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&auto=format&q=80){group="partial"}
 
-![Neon at night](https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=600){group="partial"}
+![Neon at night](https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=600&auto=format&q=80){group="partial"}
 
-![Ramen](https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=600){group="partial"}
+![Ramen](https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=600&auto=format&q=80){group="partial"}
 
-![Tokyo Tower](https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=600){group="partial"}
+![Tokyo Tower](https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=600&auto=format&q=80){group="partial"}
 :::
 
 ### 4 columns, 7 images (last row has 3)
 
 ::: {.photo-grid}
-![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600){group="partial"}
+![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600&auto=format&q=80){group="partial"}
 
-![Temple gate](https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600){group="partial"}
+![Temple gate](https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&auto=format&q=80){group="partial"}
 
-![Neon at night](https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=600){group="partial"}
+![Neon at night](https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=600&auto=format&q=80){group="partial"}
 
-![Ramen](https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=600){group="partial"}
+![Ramen](https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=600&auto=format&q=80){group="partial"}
 
-![Tokyo Tower](https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=600){group="partial"}
+![Tokyo Tower](https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=600&auto=format&q=80){group="partial"}
 
-![Train platform](https://images.unsplash.com/photo-1565618754154-c8011e5df2a6?w=600){group="partial"}
+![Train platform](https://images.unsplash.com/photo-1565618754154-c8011e5df2a6?w=600&auto=format&q=80){group="partial"}
 
-![Tsukiji market](https://images.unsplash.com/photo-1553621042-f6e147245754?w=600){group="partial"}
+![Tsukiji market](https://images.unsplash.com/photo-1553621042-f6e147245754?w=600&auto=format&q=80){group="partial"}
 :::
 
 ### 4 columns, 6 images (last row has 2)
 
 ::: {.photo-grid}
-![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600){group="partial"}
+![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600&auto=format&q=80){group="partial"}
 
-![Temple gate](https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600){group="partial"}
+![Temple gate](https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&auto=format&q=80){group="partial"}
 
-![Neon at night](https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=600){group="partial"}
+![Neon at night](https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=600&auto=format&q=80){group="partial"}
 
-![Ramen](https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=600){group="partial"}
+![Ramen](https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=600&auto=format&q=80){group="partial"}
 
-![Tokyo Tower](https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=600){group="partial"}
+![Tokyo Tower](https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=600&auto=format&q=80){group="partial"}
 
-![Train platform](https://images.unsplash.com/photo-1565618754154-c8011e5df2a6?w=600){group="partial"}
+![Train platform](https://images.unsplash.com/photo-1565618754154-c8011e5df2a6?w=600&auto=format&q=80){group="partial"}
 :::
 
 ### 5 columns, 7 images (last row has 2)
 
 ::: {.photo-grid .cols-5}
-![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600){group="partial"}
+![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600&auto=format&q=80){group="partial"}
 
-![Temple gate](https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600){group="partial"}
+![Temple gate](https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&auto=format&q=80){group="partial"}
 
-![Neon at night](https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=600){group="partial"}
+![Neon at night](https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=600&auto=format&q=80){group="partial"}
 
-![Ramen](https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=600){group="partial"}
+![Ramen](https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=600&auto=format&q=80){group="partial"}
 
-![Tokyo Tower](https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=600){group="partial"}
+![Tokyo Tower](https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=600&auto=format&q=80){group="partial"}
 
-![Train platform](https://images.unsplash.com/photo-1565618754154-c8011e5df2a6?w=600){group="partial"}
+![Train platform](https://images.unsplash.com/photo-1565618754154-c8011e5df2a6?w=600&auto=format&q=80){group="partial"}
 
-![Tsukiji market](https://images.unsplash.com/photo-1553621042-f6e147245754?w=600){group="partial"}
+![Tsukiji market](https://images.unsplash.com/photo-1553621042-f6e147245754?w=600&auto=format&q=80){group="partial"}
 :::

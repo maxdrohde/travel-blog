@@ -2,7 +2,7 @@
 title: "Paris in Winter"
 date: 2024-12-15
 description: "A week exploring the streets, cafes, and museums of Paris during the holiday season."
-image: https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800
+image: https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&auto=format&q=80
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillam dolore eu fugiat nulla pariatur.
@@ -12,7 +12,7 @@ Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur
 ## Along the Seine
 
 ::: {.photo-wide}
-![The Seine at golden hour](https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1200){group="paris" description="The Seine at golden hour, with the Eiffel Tower in the distance."}
+![The Seine at golden hour](https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1200&auto=format&q=80){group="paris" description="The Seine at golden hour, with the Eiffel Tower in the distance." width="1200" height="800"}
 :::
 
 Cras ultricies ligula sed magna dictum porta. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus. Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus. Vivamus suscipit tortor eget felis porttitor volutpat.
@@ -22,35 +22,35 @@ Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus convallis qu
 ## Around the City
 
 ::: {.photo-grid}
-![Montmartre streets](https://images.unsplash.com/photo-1550340499-a6c60fc8287c?w=600){group="paris" description="Wandering through Montmartre."}
+![Montmartre streets](https://images.unsplash.com/photo-1550340499-a6c60fc8287c?w=600&auto=format&q=80){group="paris" description="Wandering through Montmartre."}
 
-![Cafe life](https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=600){group="paris" description="Coffee and people-watching at a corner cafe."}
+![Cafe life](https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=600&auto=format&q=80){group="paris" description="Coffee and people-watching at a corner cafe."}
 
-![Louvre at night](https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600){group="paris" description="The Louvre pyramid lit up at night."}
+![Louvre at night](https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&auto=format&q=80){group="paris" description="The Louvre pyramid lit up at night."}
 
-![Street details](https://images.unsplash.com/photo-1549144511-f099e773c147?w=600){group="paris" description="Parisian architecture details."}
+![Street details](https://images.unsplash.com/photo-1549144511-f099e773c147?w=600&auto=format&q=80){group="paris" description="Parisian architecture details."}
 
-![Eiffel Tower](https://images.unsplash.com/photo-1460904577954-8fadb262612c?w=600){group="paris" description="The Eiffel Tower from Trocadero."}
+![Eiffel Tower](https://images.unsplash.com/photo-1460904577954-8fadb262612c?w=600&auto=format&q=80){group="paris" description="The Eiffel Tower from Trocadero."}
 
-![Bridge at dusk](https://images.unsplash.com/photo-1520939817895-060bdaf4fe1b?w=600){group="paris" description="Pont Alexandre III at dusk."}
+![Bridge at dusk](https://images.unsplash.com/photo-1520939817895-060bdaf4fe1b?w=600&auto=format&q=80){group="paris" description="Pont Alexandre III at dusk."}
 
-![Pastries](https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600){group="paris" description="Morning pastries at a local boulangerie."}
+![Pastries](https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&auto=format&q=80){group="paris" description="Morning pastries at a local boulangerie."}
 
-![Rooftops](https://images.unsplash.com/photo-1431274172761-fca41d930114?w=600){group="paris" description="Parisian rooftops from above."}
+![Rooftops](https://images.unsplash.com/photo-1431274172761-fca41d930114?w=600&auto=format&q=80){group="paris" description="Parisian rooftops from above."}
 
-![Tuileries Garden](https://images.unsplash.com/photo-1524396309943-e03f5249f002?w=600){group="paris" description="Tuileries Garden on a crisp winter day."}
+![Tuileries Garden](https://images.unsplash.com/photo-1524396309943-e03f5249f002?w=600&auto=format&q=80){group="paris" description="Tuileries Garden on a crisp winter day."}
 
-![Metro entrance](https://images.unsplash.com/photo-1517649763962-0c623066013b?w=600){group="paris" description="A classic Art Nouveau metro entrance."}
+![Metro entrance](https://images.unsplash.com/photo-1517649763962-0c623066013b?w=600&auto=format&q=80){group="paris" description="A classic Art Nouveau metro entrance."}
 
-![Sacre-Coeur](https://images.unsplash.com/photo-1583265627959-fb7042f5133b?w=600){group="paris" description="Sacre-Coeur from the steps of Montmartre."}
+![Sacre-Coeur](https://images.unsplash.com/photo-1583265627959-fb7042f5133b?w=600&auto=format&q=80){group="paris" description="Sacre-Coeur from the steps of Montmartre."}
 
-![Seine bookstalls](https://images.unsplash.com/photo-1500039436846-25ae2f11882e?w=600){group="paris" description="Bouquinistes along the Seine."}
+![Seine bookstalls](https://images.unsplash.com/photo-1500039436846-25ae2f11882e?w=600&auto=format&q=80){group="paris" description="Bouquinistes along the Seine."}
 
-![Christmas lights](https://images.unsplash.com/photo-1545622783-b3e021430fee?w=600){group="paris" description="Champs-Elysees Christmas lights."}
+![Christmas lights](https://images.unsplash.com/photo-1545622783-b3e021430fee?w=600&auto=format&q=80){group="paris" description="Champs-Elysees Christmas lights."}
 
-![Cafe interior](https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=600){group="paris" description="Inside a classic Parisian cafe."}
+![Cafe interior](https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=600&auto=format&q=80){group="paris" description="Inside a classic Parisian cafe."}
 
-![Market stalls](https://images.unsplash.com/photo-1543589077-47d81606c1bf?w=600){group="paris" description="Holiday market stalls with warm lights."}
+![Market stalls](https://images.unsplash.com/photo-1543589077-47d81606c1bf?w=600&auto=format&q=80){group="paris" description="Holiday market stalls with warm lights."}
 
-![Notre-Dame area](https://images.unsplash.com/photo-1478391679764-b2d8b3cd1e94?w=600){group="paris" description="Near Notre-Dame, still beautiful even under renovation."}
+![Notre-Dame area](https://images.unsplash.com/photo-1478391679764-b2d8b3cd1e94?w=600&auto=format&q=80){group="paris" description="Near Notre-Dame, still beautiful even under renovation."}
 :::

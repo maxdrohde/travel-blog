@@ -2,7 +2,7 @@
 title: "Tokyo in Cherry Blossom Season"
 date: 2025-03-28
 description: "Temples, ramen, and sakura — two weeks in Tokyo during peak bloom."
-image: https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800
+image: https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&auto=format&q=80
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillam dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
@@ -14,7 +14,7 @@ Cras ultricies ligula sed magna dictum porta. Mauris blandit aliquet elit, eget 
 ## Sakura Highlights
 
 ::: {.photo-wide}
-![Cherry blossoms along the Meguro River](https://images.unsplash.com/photo-1522383225653-ed111181a951?w=1200){group="tokyo" description="Peak bloom along the Meguro River canal."}
+![Cherry blossoms along the Meguro River](https://images.unsplash.com/photo-1522383225653-ed111181a951?w=1200&auto=format&q=80){group="tokyo" description="Peak bloom along the Meguro River canal." width="1200" height="800"}
 :::
 
 Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla porttitor accumsan tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Proin eget tortor risus.
@@ -24,35 +24,35 @@ Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Viv
 ## City Scenes
 
 ::: {.photo-grid}
-![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600){group="tokyo" description="The organized chaos of Shibuya crossing."}
+![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600&auto=format&q=80){group="tokyo" description="The organized chaos of Shibuya crossing."}
 
-![Temple gate](https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600){group="tokyo" description="Senso-ji temple entrance in Asakusa."}
+![Temple gate](https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&auto=format&q=80){group="tokyo" description="Senso-ji temple entrance in Asakusa."}
 
-![Neon at night](https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=600){group="tokyo" description="Shinjuku neon glow after dark."}
+![Neon at night](https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=600&auto=format&q=80){group="tokyo" description="Shinjuku neon glow after dark."}
 
-![Ramen](https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=600){group="tokyo" description="A perfect bowl of tonkotsu ramen."}
+![Ramen](https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=600&auto=format&q=80){group="tokyo" description="A perfect bowl of tonkotsu ramen."}
 
-![Tokyo Tower](https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=600){group="tokyo" description="Tokyo Tower against the evening sky."}
+![Tokyo Tower](https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=600&auto=format&q=80){group="tokyo" description="Tokyo Tower against the evening sky."}
 
-![Train platform](https://images.unsplash.com/photo-1565618754154-c8011e5df2a6?w=600){group="tokyo" description="Waiting for the Yamanote line."}
+![Train platform](https://images.unsplash.com/photo-1565618754154-c8011e5df2a6?w=600&auto=format&q=80){group="tokyo" description="Waiting for the Yamanote line."}
 
-![Tsukiji market](https://images.unsplash.com/photo-1553621042-f6e147245754?w=600){group="tokyo" description="Fresh sushi at the outer market."}
+![Tsukiji market](https://images.unsplash.com/photo-1553621042-f6e147245754?w=600&auto=format&q=80){group="tokyo" description="Fresh sushi at the outer market."}
 
-![Akihabara](https://images.unsplash.com/photo-1480796927426-f609979314bd?w=600){group="tokyo" description="Akihabara electric town."}
+![Akihabara](https://images.unsplash.com/photo-1480796927426-f609979314bd?w=600&auto=format&q=80){group="tokyo" description="Akihabara electric town."}
 
-![Garden path](https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?w=600){group="tokyo" description="A quiet garden path in Shinjuku Gyoen."}
+![Garden path](https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?w=600&auto=format&q=80){group="tokyo" description="A quiet garden path in Shinjuku Gyoen."}
 
-![Side street](https://images.unsplash.com/photo-1554797589-7241bb691973?w=600){group="tokyo" description="A residential side street in Yanaka."}
+![Side street](https://images.unsplash.com/photo-1554797589-7241bb691973?w=600&auto=format&q=80){group="tokyo" description="A residential side street in Yanaka."}
 
-![Temple detail](https://images.unsplash.com/photo-1504109586057-7a2ae83d1338?w=600){group="tokyo" description="Incense at Meiji Shrine."}
+![Temple detail](https://images.unsplash.com/photo-1504109586057-7a2ae83d1338?w=600&auto=format&q=80){group="tokyo" description="Incense at Meiji Shrine."}
 
-![Cherry blossom closeup](https://images.unsplash.com/photo-1522383225653-ed111181a951?w=600){group="tokyo" description="Sakura petals up close."}
+![Cherry blossom closeup](https://images.unsplash.com/photo-1522383225653-ed111181a951?w=600&auto=format&q=80){group="tokyo" description="Sakura petals up close."}
 
-![Pond reflection](https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=600){group="tokyo" description="Reflections in a temple pond."}
+![Pond reflection](https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=600&auto=format&q=80){group="tokyo" description="Reflections in a temple pond."}
 
-![Lanterns](https://images.unsplash.com/photo-1528164344705-47542687000d?w=600){group="tokyo" description="Paper lanterns at dusk."}
+![Lanterns](https://images.unsplash.com/photo-1528164344705-47542687000d?w=600&auto=format&q=80){group="tokyo" description="Paper lanterns at dusk."}
 
-![Bamboo path](https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600){group="tokyo" description="Bamboo grove path."}
+![Bamboo path](https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600&auto=format&q=80){group="tokyo" description="Bamboo grove path."}
 
-![Tea ceremony](https://images.unsplash.com/photo-1563822249366-3efb23b8e0c9?w=600){group="tokyo" description="Matcha in a traditional tea house."}
+![Tea ceremony](https://images.unsplash.com/photo-1563822249366-3efb23b8e0c9?w=600&auto=format&q=80){group="tokyo" description="Matcha in a traditional tea house."}
 :::

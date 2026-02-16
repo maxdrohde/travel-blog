@@ -22,7 +22,7 @@ format:
     css: styles.css
     lightbox: true
     toc: false
-    image-lazy-loading: false
+    image-lazy-loading: true
     mainfont: "IBM Plex Sans, sans-serif"
     fontsize: 18px
     linestretch: 1.55
