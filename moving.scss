@@ -23,7 +23,7 @@ $border-radius: 3px;
 
 /*-- scss:rules --*/
 
-// Typography — Source Sans 3
+// Typography — IBM Plex Sans
 body {
     font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
     font-weight: 400;
@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5, h6 {
     color: $body-color;
 }
 
-// Links — blue, no underline until hover
+// Links — orange, no underline until hover
 a {
     text-decoration: none;
 

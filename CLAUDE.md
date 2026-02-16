@@ -18,7 +18,7 @@ Quarto website for a travel photography blog using a minimal "Moving"-inspired d
 ### Content
 
 - **Trip posts** live in `trips/<date-slug>/index.qmd` (e.g., `trips/2025-03-tokyo/index.qmd`)
-- Each post needs YAML front matter: `title`, `date`, `description`, `image` (cover photo), `categories`
+- Each post needs YAML front matter: `title`, `date`, `description`, `image` (cover photo)
 - `trips/_metadata.yml` applies shared settings (currently `toc: false`) to all posts
 
 ### Theming & Layout

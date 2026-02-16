@@ -64,7 +64,10 @@
 }
 
 @media (max-width: 768px) {
-    .photo-grid {
+    .photo-grid,
+    .photo-grid.cols-3,
+    .photo-grid.cols-5,
+    .photo-grid.cols-6 {
         grid-template-columns: repeat(2, 1fr);
     }
     .photo-grid.cols-1 {

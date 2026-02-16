@@ -46,8 +46,6 @@ Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Viv
 
 ![Temple detail](https://images.unsplash.com/photo-1504109586057-7a2ae83d1338?w=600&auto=format&q=80){group="tokyo" description="Incense at Meiji Shrine."}
 
-![Cherry blossom closeup](https://images.unsplash.com/photo-1522383225653-ed111181a951?w=600&auto=format&q=80){group="tokyo" description="Sakura petals up close."}
-
 ![Pond reflection](https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=600&auto=format&q=80){group="tokyo" description="Reflections in a temple pond."}
 
 ![Lanterns](https://images.unsplash.com/photo-1528164344705-47542687000d?w=600&auto=format&q=80){group="tokyo" description="Paper lanterns at dusk."}
