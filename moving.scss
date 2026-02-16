@@ -1,0 +1,124 @@
+/*-- scss:defaults --*/
+
+// Moving theme colors
+$body-bg: #faf8f5;
+$body-color: #111;
+$link-color: #c4653a;
+$font-size-base: 1rem;
+
+// Grey palette
+$gray-600: #828282;
+$gray-300: lighten($gray-600, 40%);
+$gray-800: darken($gray-600, 25%);
+
+// Navbar
+$navbar-bg: $body-bg;
+$navbar-fg: $body-color;
+$navbar-light-color: $body-color;
+$navbar-light-hover-color: $link-color;
+$navbar-light-active-color: $link-color;
+
+// No rounded corners on cards
+$border-radius: 3px;
+
+/*-- scss:rules --*/
+
+// Typography — Source Sans 3
+body {
+    font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
+    font-kerning: normal;
+}
+
+// Headings — bold, Moving-inspired
+h1, h2, h3, h4, h5, h6 {
+    font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 700;
+    margin-top: 2rem;
+    color: $body-color;
+}
+
+// Links — blue, no underline until hover
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+// Navbar — minimal Moving-style header
+.navbar {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: $body-bg !important;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: $body-color !important;
+}
+
+.navbar .nav-link {
+    color: $body-color !important;
+    font-size: 0.95rem;
+
+    &:hover {
+        color: $link-color !important;
+        text-decoration: underline;
+    }
+}
+
+// Footer — simple, understated
+.nav-footer {
+    border-top: 1px solid $gray-300;
+    color: $gray-600;
+    font-size: 0.85rem;
+}
+
+// Post meta text
+.metadata, .listing-date, .listing-author {
+    color: lighten($body-color, 25%);
+    font-size: 1rem;
+}
+
+// Blockquotes — Moving style
+blockquote {
+    color: $gray-600;
+    border-left: 4px solid $gray-300;
+    padding-left: 15px;
+    letter-spacing: -0.5px;
+}
+
+// Code blocks
+pre, code {
+    font-size: 0.9em;
+    border-radius: 3px;
+    background-color: lighten($gray-300, 3%);
+}
+
+// Images
+.photo-wide img {
+    border-radius: 3px;
+}
+
+// Tables — Moving style
+table {
+    border-collapse: collapse;
+    width: 100%;
+    color: lighten($body-color, 18%);
+
+    th {
+        background-color: lighten($gray-300, 3%);
+    }
+
+    tr:nth-child(even) {
+        background-color: lighten($gray-300, 6%);
+    }
+
+    th, td {
+        padding: 10px 15px;
+        border: 1px solid $gray-300;
+    }
+}

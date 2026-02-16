@@ -1,0 +1,247 @@
+---
+title: "Style Reference"
+date: 2026-02-16
+description: "A reference for all layout and formatting features available on this site."
+image: https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=800
+---
+
+A companion to the [Photo Grid Demo](../photo-grid-demo/index.qmd), covering everything
+else: wide photos, lightbox features, typography, tables, callouts, columns, and more.
+
+## Wide Photo
+
+The `.photo-wide` class shows a single image at full content width with a max height of
+500px. Good for hero-style shots within a post.
+
+::: {.photo-wide}
+![Pont Alexandre III at dusk](https://images.unsplash.com/photo-1520939817895-060bdaf4fe1b?w=1200){group="wide" description="Pont Alexandre III at dusk."}
+:::
+
+## Lightbox Groups
+
+All images on this site open in a lightbox when clicked. The `group` attribute links
+images into a shared gallery so you can arrow between them. Different `group` values
+create separate galleries on the same page.
+
+The `description` attribute adds a caption in the lightbox overlay — visible when you
+click any image on this page.
+
+## Typography
+
+### Headings
+
+H1 is reserved for the page title. Here are H2 through H6, all in IBM Plex Sans bold.
+To avoid breaking the page structure, these are shown as text samples rather than actual
+headings:
+
+::: {style="padding-left: 1rem; border-left: 3px solid #ddd;"}
+[Heading 2]{style="font-size: 1.5rem; font-weight: 700; display: block; margin: 0.8rem 0;"}
+
+[Heading 3]{style="font-size: 1.25rem; font-weight: 700; display: block; margin: 0.8rem 0;"}
+
+[Heading 4]{style="font-size: 1.1rem; font-weight: 700; display: block; margin: 0.8rem 0;"}
+
+[Heading 5]{style="font-size: 1rem; font-weight: 700; display: block; margin: 0.8rem 0;"}
+
+[Heading 6]{style="font-size: 0.9rem; font-weight: 700; display: block; margin: 0.8rem 0;"}
+:::
+
+### Inline Formatting
+
+| Syntax | Result |
+|--------|--------|
+| `**bold**` | **bold** |
+| `*italic*` | *italic* |
+| `***bold italic***` | ***bold italic*** |
+| `~~strikethrough~~` | ~~strikethrough~~ |
+| `^superscript^` | ^superscript^ |
+| `~subscript~` | ~subscript~ |
+| `` `inline code` `` | `inline code` |
+| `[link text](url)` | [link text](https://example.com) |
+
+## Blockquotes
+
+> The city was better than any photo of it. We walked until our feet gave out, ate whatever
+> looked good, and tried not to think about the flight home.
+
+Nested blockquote:
+
+> Someone once told me that the best trips are the ones where you throw away the itinerary.
+>
+> > I think they were right.
+
+## Tables
+
+| City | Season | Days | Highlight |
+|------|--------|------|-----------|
+| Paris | Winter | 7 | Seine at sunset |
+| Tokyo | Spring | 14 | Cherry blossoms at Meguro River |
+| Kyoto | Autumn | 5 | Fushimi Inari at dawn |
+| Lisbon | Summer | 4 | Tram 28 through Alfama |
+
+## Code Blocks
+
+Inline: use `quarto render` to build the site.
+
+Fenced block with syntax highlighting:
+
+```yaml
+# _quarto.yml excerpt
+format:
+  html:
+    theme:
+      - default
+      - moving.scss
+    css: styles.css
+    lightbox: true
+```
+
+```css
+/* Column modifier — 3 columns */
+.photo-grid.cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+```
+
+## Callouts
+
+::: {.callout-note}
+## Packing tip
+Roll your clothes instead of folding them. You'll fit more and wrinkle less.
+:::
+
+::: {.callout-tip}
+## Golden hour
+The best light for photos is in the first hour after sunrise and the last hour before
+sunset. Plan your walks accordingly.
+:::
+
+::: {.callout-warning}
+## Cherry blossom timing
+Peak bloom in Tokyo varies by 2-3 weeks year to year. Don't book flights until the
+forecast narrows down in early March.
+:::
+
+::: {.callout-important}
+## Visa requirements
+Check entry requirements well before your trip. Some countries require applications
+weeks in advance.
+:::
+
+::: {.callout-caution collapse="true"}
+## Collapsible callout
+Click to expand. This is useful for long asides that would interrupt the flow of a post.
+You can put anything in here — text, images, code, tables.
+:::
+
+## Columns
+
+:::: {.columns}
+::: {.column width="50%"}
+**Left column** — useful for placing text alongside an image, comparing two photos, or
+breaking up a wall of text. Columns stack vertically on mobile.
+:::
+
+::: {.column width="50%"}
+![Ramen](https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=400){group="cols" description="Tonkotsu ramen."}
+:::
+::::
+
+Uneven split (30/70):
+
+:::: {.columns}
+::: {.column width="30%"}
+**Narrow sidebar.** Good for captions, metadata, or short annotations next to a
+larger block of content.
+:::
+
+::: {.column width="70%"}
+The wider column carries the main content. This layout works well when you want to
+annotate a photo or add context without taking up a full row. The asymmetry draws the
+eye to the larger side.
+:::
+::::
+
+## Tabsets
+
+::: {.panel-tabset}
+## Morning
+
+Coffee at the hotel, then a long walk through quiet residential streets before the
+crowds wake up. Best time for photos — soft light, empty sidewalks.
+
+## Afternoon
+
+Museums, markets, or just sitting in a park. This is when jet lag catches up. A nap
+is not defeat; it's strategy.
+
+## Evening
+
+Find somewhere to eat. No reservations, just walk until something looks right. The
+best meals on every trip have been unplanned.
+:::
+
+## Lists
+
+Unordered:
+
+- Pack light — one bag, carry-on only
+- Learn three phrases in the local language
+- Leave room for getting lost
+  - Literally (wrong turns lead to discoveries)
+  - Figuratively (skip the itinerary sometimes)
+
+Ordered:
+
+1. Book flights
+2. Find a place to stay
+3. Make a loose list of neighborhoods to explore
+4. Throw away the list on day two
+
+Definition list:
+
+Hanami
+: The Japanese tradition of enjoying the beauty of cherry blossoms. Usually involves
+  sitting under the trees with food and drink.
+
+Bouquinistes
+: The open-air booksellers along the banks of the Seine in Paris. Their green metal
+  boxes have been there since the 16th century.
+
+Konbini
+: Japanese convenience stores (7-Eleven, Lawson, FamilyMart). Far better than the
+  name suggests — fresh onigiri, good coffee, usable ATMs.
+
+## Footnotes
+
+The Meguro River walk is roughly 3.8 km from Ikejiri-Ohashi to Meguro station[^1].
+The best section for photos is the middle third, between Nakameguro and the highway
+overpass[^2].
+
+[^1]: You can start from either end. The Nakameguro station entrance drops you right
+      into the densest stretch of trees.
+
+[^2]: Arrive before 7 AM if you want photos without crowds. By 10 AM the path is
+      shoulder-to-shoulder.
+
+## Horizontal Rule
+
+Content above the rule.
+
+* * *
+
+Content below the rule. Use `* * *` in Quarto — not `---`, which is interpreted as
+a YAML delimiter.
+
+## Math
+
+Inline math: the focal length and aperture relationship is $N = f / D$ where $N$ is the
+f-number, $f$ is focal length, and $D$ is the entrance pupil diameter.
+
+Display math:
+
+$$
+\text{Exposure Value} = \log_2\!\left(\frac{N^2}{t}\right)
+$$
+
+where $N$ is the f-number and $t$ is exposure time in seconds.

@@ -1,0 +1,33 @@
+<%
+let currentYear = null;
+for (const item of items) {
+    const date = new Date(item.date);
+    const year = date.getFullYear();
+    const month = date.toLocaleDateString("en-US", { month: "short" });
+    const day = String(date.getDate()).padStart(2, "0");
+
+    if (year !== currentYear) {
+        if (currentYear !== null) {
+%>
+</div>
+<%
+        }
+        currentYear = year;
+%>
+<div class="post-year-group">
+<div class="post-year"><%= year %></div>
+<%
+    }
+%>
+<div class="post-entry">
+<span class="post-date"><%= month %> <%= day %></span>
+<a class="post-link" href="<%= item.path %>"><%= item.title %></a>
+</div>
+<%
+}
+if (currentYear !== null) {
+%>
+</div>
+<%
+}
+%>

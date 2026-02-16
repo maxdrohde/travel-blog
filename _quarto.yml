@@ -1,0 +1,36 @@
+project:
+  type: website
+  output-dir: _site
+  pre-render: scripts/optimize-images.sh
+
+website:
+  title: "Travel Blog"
+  navbar:
+    background: light
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+
+format:
+  html:
+    theme:
+      - default
+      - moving.scss
+    css: styles.css
+    lightbox: true
+    toc: false
+    image-lazy-loading: false
+    mainfont: "IBM Plex Sans, sans-serif"
+    fontsize: 18px
+    linestretch: 1.55
+    max-width: 1000px
+    include-in-header:
+      text: |
+        <link rel="preconnect" href="https://images.unsplash.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400&display=swap">
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+        <link rel="dns-prefetch" href="https://images.unsplash.com">

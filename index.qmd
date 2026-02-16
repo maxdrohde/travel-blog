@@ -1,0 +1,16 @@
+---
+title: ""
+listing:
+  id: all-trips
+  contents: trips
+  sort: date desc
+  type: custom
+  template: listing-home.ejs
+---
+
+::: {.hero}
+# Travel Blog
+:::
+
+::: {#all-trips}
+:::

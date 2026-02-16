@@ -1,0 +1,21 @@
+---
+title: "About"
+---
+
+Welcome to my travel blog. I document the places I visit through photos and short stories.
+
+I started this blog as a way to organize my photos after trips — somewhere between a personal
+archive and a postcard to friends. Most of the posts are heavy on images and light on words,
+though sometimes a place deserves more than a caption.
+
+I travel slowly when I can. A week in one city beats three days in three cities. I like
+walking without a map, eating where the locals eat, and staying long enough to have a
+favorite coffee shop. The best moments are usually unplanned — a wrong turn that leads to
+a viewpoint, a conversation with a stranger at a bar, the light doing something unexpected
+at the end of the day.
+
+The photos here are all shot on whatever I had with me — sometimes a proper camera, sometimes
+just a phone. I'm not a photographer in any serious sense, but I try to capture what a place
+felt like, not just what it looked like.
+
+Feel free to check out the latest trips on the [home page](index.qmd).
