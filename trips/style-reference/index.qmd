@@ -142,7 +142,8 @@ Divisio inaequalis (30/70):
 :::
 
 ::: {.column width="70%"}
-Columna latior contentum principale portat. Haec compositio bene operatur cum imaginem annotare vel contextum addere vis sine pleno ordine occupando. Asymmetria oculum ad latus maius trahit.
+Columna latior contentum principale portat. Haec compositio bene operatur cum imaginem annotare vel contextum addere vis sine pleno ordine occupando.
+Asymmetria oculum ad latus maius trahit.
 :::
 ::::
 
