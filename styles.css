@@ -34,6 +34,11 @@
 .photo-grid.cols-5 { grid-template-columns: repeat(5, 1fr); }
 .photo-grid.cols-6 { grid-template-columns: repeat(6, 1fr); }
 
+.photo-grid img,
+.photo-wide img {
+    cursor: pointer;
+}
+
 .photo-grid img {
     width: 100%;
     aspect-ratio: 3 / 2;
