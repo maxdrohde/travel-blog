@@ -1,84 +1,93 @@
 ---
-title: "Referentia Stili"
+title: "Style Reference"
 date: 2026-02-16
-description: "Referentia pro omnibus formis et compositionibus in hoc situ praestis."
+description: "A reference for all layout and formatting features available on this site."
 image: https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=800
 ---
 
-Comes [Demonstrationis Craticulae](../photo-grid-demo/index.qmd), omnia cetera tegens: imagines latas, lucernam, typographiam, tabulas, admonitiones, columnas, et plura.
+A companion to the [Photo Grid Demo](../photo-grid-demo/index.qmd), covering everything
+else: wide photos, lightbox features, typography, tables, callouts, columns, and more.
 
-## Imago Lata
+## Wide Photo
 
-Classis `.photo-wide` unam imaginem plena latitudine monstrat cum altitudine maxima 500px. Bona pro imaginibus heroicis intra scriptum.
+The `.photo-wide` class shows a single image at full content width with a max height of
+500px. Good for hero-style shots within a post.
 
 ::: {.photo-wide}
-![Pons ornatus sub crepusculo](https://images.unsplash.com/photo-1520939817895-060bdaf4fe1b?w=1200){group="wide" description="Pons ornatus sub crepusculo."}
+![Pont Alexandre III at dusk](https://images.unsplash.com/photo-1520939817895-060bdaf4fe1b?w=1200){group="wide" description="Pont Alexandre III at dusk."}
 :::
 
-## Coetus Lucernae
+## Lightbox Groups
 
-Omnes imagines in hoc situ in lucerna aperiuntur cum premuntur. Attributum `group` imagines in galeriam communem coniungit ut sagittis inter eas navigare possis. Valores `group` diversi galerias separatas in eadem pagina creant.
+All images on this site open in a lightbox when clicked. The `group` attribute links
+images into a shared gallery so you can arrow between them. Different `group` values
+create separate galleries on the same page.
 
-Attributum `description` titulum in tegumento lucernae addit — visibile cum quamlibet imaginem in hac pagina premis.
+The `description` attribute adds a caption in the lightbox overlay — visible when you
+click any image on this page.
 
-## Typographia
+## Typography
 
-### Capita
+### Headings
 
-H1 titulo paginae reservatur. Hic sunt H2 usque ad H6, omnia in IBM Plex Sans audaci. Ad structuram paginae servandam, haec ut specimina textus monstrantur potius quam capita vera:
+H1 is reserved for the page title. Here are H2 through H6, all in IBM Plex Sans bold.
+To avoid breaking the page structure, these are shown as text samples rather than actual
+headings:
 
 ::: {style="padding-left: 1rem; border-left: 3px solid #ddd;"}
-[Caput 2]{style="font-size: 1.5rem; font-weight: 700; display: block; margin: 0.8rem 0;"}
+[Heading 2]{style="font-size: 1.5rem; font-weight: 700; display: block; margin: 0.8rem 0;"}
 
-[Caput 3]{style="font-size: 1.25rem; font-weight: 700; display: block; margin: 0.8rem 0;"}
+[Heading 3]{style="font-size: 1.25rem; font-weight: 700; display: block; margin: 0.8rem 0;"}
 
-[Caput 4]{style="font-size: 1.1rem; font-weight: 700; display: block; margin: 0.8rem 0;"}
+[Heading 4]{style="font-size: 1.1rem; font-weight: 700; display: block; margin: 0.8rem 0;"}
 
-[Caput 5]{style="font-size: 1rem; font-weight: 700; display: block; margin: 0.8rem 0;"}
+[Heading 5]{style="font-size: 1rem; font-weight: 700; display: block; margin: 0.8rem 0;"}
 
-[Caput 6]{style="font-size: 0.9rem; font-weight: 700; display: block; margin: 0.8rem 0;"}
+[Heading 6]{style="font-size: 0.9rem; font-weight: 700; display: block; margin: 0.8rem 0;"}
 :::
 
-### Formatio Inlinea
+### Inline Formatting
 
-| Syntaxis | Effectus |
+| Syntax | Result |
 |--------|--------|
-| `**audax**` | **audax** |
-| `*italicum*` | *italicum* |
-| `***audax italicum***` | ***audax italicum*** |
-| `~~deletum~~` | ~~deletum~~ |
-| `^superscriptum^` | ^superscriptum^ |
-| `~subscriptum~` | ~subscriptum~ |
-| `` `codex inlineus` `` | `codex inlineus` |
-| `[textus nexus](url)` | [textus nexus](https://example.com) |
+| `**bold**` | **bold** |
+| `*italic*` | *italic* |
+| `***bold italic***` | ***bold italic*** |
+| `~~strikethrough~~` | ~~strikethrough~~ |
+| `^superscript^` | ^superscript^ |
+| `~subscript~` | ~subscript~ |
+| `` `inline code` `` | `inline code` |
+| `[link text](url)` | [link text](https://example.com) |
 
-## Citationes
+## Blockquotes
 
-> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+> incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+> exercitation ullamco laboris.
 
-Citatio nidificata:
+Nested blockquote:
 
-> Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.
+> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 >
-> > Curabitur aliquet quam id dui posuere blandit.
+> > Sed do eiusmod tempor incididunt ut labore.
 
-## Tabulae
+## Tables
 
-| Urbs | Tempus | Dies | Insignia |
+| City | Season | Days | Highlight |
 |------|--------|------|-----------|
-| Lorem | Hiems | 7 | Flumen sub occasu |
-| Ipsum | Ver | 14 | Flores ad canalem |
-| Dolor | Autumnus | 5 | Templum sub aurora |
-| Amet | Aestas | 4 | Currus per vicum |
+| Paris | Winter | 7 | Seine at sunset |
+| Tokyo | Spring | 14 | Cherry blossoms at Meguro River |
+| Kyoto | Autumn | 5 | Fushimi Inari at dawn |
+| Lisbon | Summer | 4 | Tram 28 through Alfama |
 
-## Codex
+## Code Blocks
 
-Inlineum: utere `quarto render` ad situm aedificandum.
+Inline: use `quarto render` to build the site.
 
-Clausum cum illuminatione syntaxis:
+Fenced block with syntax highlighting:
 
 ```yaml
-# _quarto.yml excerptum
+# _quarto.yml excerpt
 format:
   html:
     theme:
@@ -89,132 +98,145 @@ format:
 ```
 
 ```css
-/* Modificator columnarum — 3 columnae */
+/* Column modifier — 3 columns */
 .photo-grid.cols-3 {
     grid-template-columns: repeat(3, 1fr);
 }
 ```
 
-## Admonitiones
+## Callouts
 
 ::: {.callout-note}
-## Consilium de sarcinis
+## Packing tip
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.
 :::
 
 ::: {.callout-tip}
-## Hora aurea
+## Golden hour
 Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur aliquet quam id dui posuere blandit.
 :::
 
 ::: {.callout-warning}
-## Tempus florum
+## Cherry blossom timing
 Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Nulla porttitor accumsan tincidunt.
 :::
 
 ::: {.callout-important}
-## Requisita visa
+## Visa requirements
 Cras ultricies ligula sed magna dictum porta. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
 :::
 
 ::: {.callout-caution collapse="true"}
-## Admonitio plicabilis
-Preme ad expandendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+## Collapsible callout
+Click to expand. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 :::
 
-## Columnae
+## Columns
 
 :::: {.columns}
 ::: {.column width="50%"}
-**Columna sinistra** — utilis ad textum iuxta imaginem ponendum, duas imagines comparandum, vel murum textus frangendum. Columnae in mobilibus verticaliter disponuntur.
+**Left column** — useful for placing text alongside an image, comparing two photos, or
+breaking up a wall of text. Columns stack vertically on mobile.
 :::
 
 ::: {.column width="50%"}
-![Ius caldum](https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=400){group="cols" description="Ius caldum porcinum."}
+![Ramen](https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=400){group="cols" description="Tonkotsu ramen."}
 :::
 ::::
 
-Divisio inaequalis (30/70):
+Uneven split (30/70):
 
 :::: {.columns}
 ::: {.column width="30%"}
-**Barra lateralis angusta.** Bona pro titulis, metadatis, vel annotationibus brevibus iuxta maiorem partem contentus.
+**Narrow sidebar.** Good for captions, metadata, or short annotations next to a
+larger block of content.
 :::
 
 ::: {.column width="70%"}
-Columna latior contentum principale portat. Haec compositio bene operatur cum imaginem annotare vel contextum addere vis sine pleno ordine occupando.
-Asymmetria oculum ad latus maius trahit.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 :::
 ::::
 
-## Tabulata
+## Tabsets
 
 ::: {.panel-tabset}
-## Mane
+## Morning
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Optimum tempus pro imaginibus — lux mollis, semitae vacuae.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 
-## Post Meridiem
+## Afternoon
 
-Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed.
+Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur
+aliquet quam id dui posuere blandit. Vivamus magna justo.
 
-## Vespere
+## Evening
 
-Cras ultricies ligula sed magna dictum porta. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada.
+Cras ultricies ligula sed magna dictum porta. Mauris blandit aliquet elit, eget
+tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada.
 :::
 
-## Indices
+## Lists
 
-Non ordinatum:
+Unordered:
 
 - Lorem ipsum dolor sit amet
 - Consectetur adipiscing elit
 - Sed do eiusmod tempor
-  - Incididunt ut labore (lorem ipsum)
-  - Et dolore magna aliqua (dolor sit amet)
+  - Incididunt ut labore
+  - Et dolore magna aliqua
 
-Ordinatum:
+Ordered:
 
-1. Curabitur aliquet quam
-2. Vivamus magna justo
-3. Lacinia eget consectetur sed
-4. Convallis at tellus
+1. Lorem ipsum dolor sit amet
+2. Consectetur adipiscing elit
+3. Sed do eiusmod tempor incididunt
+4. Ut labore et dolore magna aliqua
 
-Index definitionum:
+Definition list:
 
 Hanami
-: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+  incididunt ut labore et dolore magna aliqua.
 
 Bouquinistes
-: Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur aliquet quam id dui posuere blandit.
+: Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur
+  aliquet quam id dui posuere blandit.
 
 Konbini
-: Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Nulla porttitor accumsan tincidunt.
+: Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Nulla
+  porttitor accumsan tincidunt.
 
-## Notae Pedis
+## Footnotes
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit circa 3.8 km[^1]. Optima sectio pro imaginibus est tertia media, inter duo puncta[^2].
+Lorem ipsum dolor sit amet, consectetur adipiscing elit[^1]. Sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua[^2].
 
 [^1]: Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.
 
-[^2]: Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed.
+[^2]: Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia
+      eget consectetur sed.
 
-## Regula Horizontalis
+## Horizontal Rule
 
-Contentum supra regulam.
+Content above the rule.
 
 * * *
 
-Contentum infra regulam. Utere `* * *` in Quarto — non `---`, quod ut delimitator YAML interpretatur.
+Content below the rule. Use `* * *` in Quarto — not `---`, which is interpreted as
+a YAML delimiter.
 
-## Mathematica
+## Math
 
-Inlineum: relatio longitudinis focalis et aperturae est $N = f / D$ ubi $N$ est numerus f, $f$ est longitudo focalis, et $D$ est diameter pupillae introitus.
+Inline math: the focal length and aperture relationship is $N = f / D$ where $N$ is the
+f-number, $f$ is focal length, and $D$ is the entrance pupil diameter.
 
-Ostentatio:
+Display math:
 
 $$
-\text{Valor Expositionis} = \log_2\!\left(\frac{N^2}{t}\right)
+\text{Exposure Value} = \log_2\!\left(\frac{N^2}{t}\right)
 $$
 
-ubi $N$ est numerus f et $t$ est tempus expositionis in secundis.
+where $N$ is the f-number and $t$ is exposure time in seconds.

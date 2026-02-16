@@ -1,7 +1,7 @@
 ---
-title: "Flores Vernales Orientis"
+title: "Tokyo in Cherry Blossom Season"
 date: 2025-03-28
-description: "Templa, cibus, et flores — duae septimanae in urbe orientali sub pleno flore."
+description: "Temples, ramen, and sakura — two weeks in Tokyo during peak bloom."
 image: https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800
 ---
 
@@ -11,48 +11,48 @@ Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur
 
 Cras ultricies ligula sed magna dictum porta. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus. Nulla quis lorem ut libero malesuada feugiat.
 
-## Flores Insignes
+## Sakura Highlights
 
 ::: {.photo-wide}
-![Flores supra canalem](https://images.unsplash.com/photo-1522383225653-ed111181a951?w=1200){group="tokyo" description="Plenus flos supra canalem fluminis."}
+![Cherry blossoms along the Meguro River](https://images.unsplash.com/photo-1522383225653-ed111181a951?w=1200){group="tokyo" description="Peak bloom along the Meguro River canal."}
 :::
 
 Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla porttitor accumsan tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Proin eget tortor risus.
 
 Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla quis lorem ut libero malesuada feugiat. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
 
-## Scaenae Urbanae
+## City Scenes
 
 ::: {.photo-grid}
-![Transitus magnus](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600){group="tokyo" description="Tumultus ordinatus transitus magni."}
+![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600){group="tokyo" description="The organized chaos of Shibuya crossing."}
 
-![Porta templi](https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600){group="tokyo" description="Introitus templi antiqui."}
+![Temple gate](https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600){group="tokyo" description="Senso-ji temple entrance in Asakusa."}
 
-![Lumina nocturna](https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=600){group="tokyo" description="Splendor luminum post tenebras."}
+![Neon at night](https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=600){group="tokyo" description="Shinjuku neon glow after dark."}
 
-![Ius caldum](https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=600){group="tokyo" description="Patera perfecta iuris calidi."}
+![Ramen](https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=600){group="tokyo" description="A perfect bowl of tonkotsu ramen."}
 
-![Turris rubra](https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=600){group="tokyo" description="Turris rubra contra caelum vespertinum."}
+![Tokyo Tower](https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=600){group="tokyo" description="Tokyo Tower against the evening sky."}
 
-![Suggestus stationis](https://images.unsplash.com/photo-1565618754154-c8011e5df2a6?w=600){group="tokyo" description="Exspectans in suggestu stationis."}
+![Train platform](https://images.unsplash.com/photo-1565618754154-c8011e5df2a6?w=600){group="tokyo" description="Waiting for the Yamanote line."}
 
-![Mercatus piscarius](https://images.unsplash.com/photo-1553621042-f6e147245754?w=600){group="tokyo" description="Cibus recens in mercatu exteriore."}
+![Tsukiji market](https://images.unsplash.com/photo-1553621042-f6e147245754?w=600){group="tokyo" description="Fresh sushi at the outer market."}
 
-![Vicus electricus](https://images.unsplash.com/photo-1480796927426-f609979314bd?w=600){group="tokyo" description="Vicus electricus luminosus."}
+![Akihabara](https://images.unsplash.com/photo-1480796927426-f609979314bd?w=600){group="tokyo" description="Akihabara electric town."}
 
-![Semita horti](https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?w=600){group="tokyo" description="Semita quieta in horto publico."}
+![Garden path](https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?w=600){group="tokyo" description="A quiet garden path in Shinjuku Gyoen."}
 
-![Angiportus](https://images.unsplash.com/photo-1554797589-7241bb691973?w=600){group="tokyo" description="Angiportus residensialis tranquillus."}
+![Side street](https://images.unsplash.com/photo-1554797589-7241bb691973?w=600){group="tokyo" description="A residential side street in Yanaka."}
 
-![Particulae templi](https://images.unsplash.com/photo-1504109586057-7a2ae83d1338?w=600){group="tokyo" description="Tus ad sacellum antiquum."}
+![Temple detail](https://images.unsplash.com/photo-1504109586057-7a2ae83d1338?w=600){group="tokyo" description="Incense at Meiji Shrine."}
 
-![Flores proxime](https://images.unsplash.com/photo-1522383225653-ed111181a951?w=600){group="tokyo" description="Petala florum cominus."}
+![Cherry blossom closeup](https://images.unsplash.com/photo-1522383225653-ed111181a951?w=600){group="tokyo" description="Sakura petals up close."}
 
-![Reflexio stagni](https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=600){group="tokyo" description="Reflexiones in stagno templi."}
+![Pond reflection](https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=600){group="tokyo" description="Reflections in a temple pond."}
 
-![Lanternae](https://images.unsplash.com/photo-1528164344705-47542687000d?w=600){group="tokyo" description="Lanternae chartaceae sub crepusculum."}
+![Lanterns](https://images.unsplash.com/photo-1528164344705-47542687000d?w=600){group="tokyo" description="Paper lanterns at dusk."}
 
-![Semita bambusae](https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600){group="tokyo" description="Semita per lucum bambusae."}
+![Bamboo path](https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600){group="tokyo" description="Bamboo grove path."}
 
-![Caerimoniae potus](https://images.unsplash.com/photo-1563822249366-3efb23b8e0c9?w=600){group="tokyo" description="Potus viridis in domo traditionali."}
+![Tea ceremony](https://images.unsplash.com/photo-1563822249366-3efb23b8e0c9?w=600){group="tokyo" description="Matcha in a traditional tea house."}
 :::
