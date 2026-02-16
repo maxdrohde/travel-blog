@@ -6,13 +6,7 @@ project:
 website:
   site-url: https://maxdrohde.github.io/travel-blog/
   title: "Travel Blog"
-  navbar:
-    background: light
-    left:
-      - href: index.qmd
-        text: Home
-      - href: about.qmd
-        text: About
+  navbar: false
 
 format:
   html:
