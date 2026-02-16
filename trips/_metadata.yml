@@ -2,4 +2,6 @@
 toc: false
 include-before-body:
   text: |
+    <div class="back-arrow-wrapper">
     <a href="/" class="back-arrow">← Back</a>
+    </div>

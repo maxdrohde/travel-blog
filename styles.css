@@ -113,12 +113,12 @@
     margin: 1.5rem 0;
 }
 
-/* Back arrow navigation */
+/* Back arrow navigation — wrapper matches title block position */
+.back-arrow-wrapper {
+    margin-bottom: -0.5rem;
+}
+
 .back-arrow {
-    display: block;
-    max-width: 1000px;
-    margin: 0.5rem auto -0.5rem auto;
-    padding: 0 1rem;
     font-size: 0.85rem;
     color: #aaa;
     text-decoration: none;
