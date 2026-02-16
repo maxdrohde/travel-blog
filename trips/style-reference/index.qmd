@@ -1,92 +1,84 @@
 ---
-title: "Style Reference"
+title: "Referentia Stili"
 date: 2026-02-16
-description: "A reference for all layout and formatting features available on this site."
+description: "Referentia pro omnibus formis et compositionibus in hoc situ praestis."
 image: https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=800
 ---
 
-A companion to the [Photo Grid Demo](../photo-grid-demo/index.qmd), covering everything
-else: wide photos, lightbox features, typography, tables, callouts, columns, and more.
+Comes [Demonstrationis Craticulae](../photo-grid-demo/index.qmd), omnia cetera tegens: imagines latas, lucernam, typographiam, tabulas, admonitiones, columnas, et plura.
 
-## Wide Photo
+## Imago Lata
 
-The `.photo-wide` class shows a single image at full content width with a max height of
-500px. Good for hero-style shots within a post.
+Classis `.photo-wide` unam imaginem plena latitudine monstrat cum altitudine maxima 500px. Bona pro imaginibus heroicis intra scriptum.
 
 ::: {.photo-wide}
-![Pont Alexandre III at dusk](https://images.unsplash.com/photo-1520939817895-060bdaf4fe1b?w=1200){group="wide" description="Pont Alexandre III at dusk."}
+![Pons ornatus sub crepusculo](https://images.unsplash.com/photo-1520939817895-060bdaf4fe1b?w=1200){group="wide" description="Pons ornatus sub crepusculo."}
 :::
 
-## Lightbox Groups
+## Coetus Lucernae
 
-All images on this site open in a lightbox when clicked. The `group` attribute links
-images into a shared gallery so you can arrow between them. Different `group` values
-create separate galleries on the same page.
+Omnes imagines in hoc situ in lucerna aperiuntur cum premuntur. Attributum `group` imagines in galeriam communem coniungit ut sagittis inter eas navigare possis. Valores `group` diversi galerias separatas in eadem pagina creant.
 
-The `description` attribute adds a caption in the lightbox overlay — visible when you
-click any image on this page.
+Attributum `description` titulum in tegumento lucernae addit — visibile cum quamlibet imaginem in hac pagina premis.
 
-## Typography
+## Typographia
 
-### Headings
+### Capita
 
-H1 is reserved for the page title. Here are H2 through H6, all in IBM Plex Sans bold.
-To avoid breaking the page structure, these are shown as text samples rather than actual
-headings:
+H1 titulo paginae reservatur. Hic sunt H2 usque ad H6, omnia in IBM Plex Sans audaci. Ad structuram paginae servandam, haec ut specimina textus monstrantur potius quam capita vera:
 
 ::: {style="padding-left: 1rem; border-left: 3px solid #ddd;"}
-[Heading 2]{style="font-size: 1.5rem; font-weight: 700; display: block; margin: 0.8rem 0;"}
+[Caput 2]{style="font-size: 1.5rem; font-weight: 700; display: block; margin: 0.8rem 0;"}
 
-[Heading 3]{style="font-size: 1.25rem; font-weight: 700; display: block; margin: 0.8rem 0;"}
+[Caput 3]{style="font-size: 1.25rem; font-weight: 700; display: block; margin: 0.8rem 0;"}
 
-[Heading 4]{style="font-size: 1.1rem; font-weight: 700; display: block; margin: 0.8rem 0;"}
+[Caput 4]{style="font-size: 1.1rem; font-weight: 700; display: block; margin: 0.8rem 0;"}
 
-[Heading 5]{style="font-size: 1rem; font-weight: 700; display: block; margin: 0.8rem 0;"}
+[Caput 5]{style="font-size: 1rem; font-weight: 700; display: block; margin: 0.8rem 0;"}
 
-[Heading 6]{style="font-size: 0.9rem; font-weight: 700; display: block; margin: 0.8rem 0;"}
+[Caput 6]{style="font-size: 0.9rem; font-weight: 700; display: block; margin: 0.8rem 0;"}
 :::
 
-### Inline Formatting
+### Formatio Inlinea
 
-| Syntax | Result |
+| Syntaxis | Effectus |
 |--------|--------|
-| `**bold**` | **bold** |
-| `*italic*` | *italic* |
-| `***bold italic***` | ***bold italic*** |
-| `~~strikethrough~~` | ~~strikethrough~~ |
-| `^superscript^` | ^superscript^ |
-| `~subscript~` | ~subscript~ |
-| `` `inline code` `` | `inline code` |
-| `[link text](url)` | [link text](https://example.com) |
+| `**audax**` | **audax** |
+| `*italicum*` | *italicum* |
+| `***audax italicum***` | ***audax italicum*** |
+| `~~deletum~~` | ~~deletum~~ |
+| `^superscriptum^` | ^superscriptum^ |
+| `~subscriptum~` | ~subscriptum~ |
+| `` `codex inlineus` `` | `codex inlineus` |
+| `[textus nexus](url)` | [textus nexus](https://example.com) |
 
-## Blockquotes
+## Citationes
 
-> The city was better than any photo of it. We walked until our feet gave out, ate whatever
-> looked good, and tried not to think about the flight home.
+> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
 
-Nested blockquote:
+Citatio nidificata:
 
-> Someone once told me that the best trips are the ones where you throw away the itinerary.
+> Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.
 >
-> > I think they were right.
+> > Curabitur aliquet quam id dui posuere blandit.
 
-## Tables
+## Tabulae
 
-| City | Season | Days | Highlight |
+| Urbs | Tempus | Dies | Insignia |
 |------|--------|------|-----------|
-| Paris | Winter | 7 | Seine at sunset |
-| Tokyo | Spring | 14 | Cherry blossoms at Meguro River |
-| Kyoto | Autumn | 5 | Fushimi Inari at dawn |
-| Lisbon | Summer | 4 | Tram 28 through Alfama |
+| Lorem | Hiems | 7 | Flumen sub occasu |
+| Ipsum | Ver | 14 | Flores ad canalem |
+| Dolor | Autumnus | 5 | Templum sub aurora |
+| Amet | Aestas | 4 | Currus per vicum |
 
-## Code Blocks
+## Codex
 
-Inline: use `quarto render` to build the site.
+Inlineum: utere `quarto render` ad situm aedificandum.
 
-Fenced block with syntax highlighting:
+Clausum cum illuminatione syntaxis:
 
 ```yaml
-# _quarto.yml excerpt
+# _quarto.yml excerptum
 format:
   html:
     theme:
@@ -97,151 +89,131 @@ format:
 ```
 
 ```css
-/* Column modifier — 3 columns */
+/* Modificator columnarum — 3 columnae */
 .photo-grid.cols-3 {
     grid-template-columns: repeat(3, 1fr);
 }
 ```
 
-## Callouts
+## Admonitiones
 
 ::: {.callout-note}
-## Packing tip
-Roll your clothes instead of folding them. You'll fit more and wrinkle less.
+## Consilium de sarcinis
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.
 :::
 
 ::: {.callout-tip}
-## Golden hour
-The best light for photos is in the first hour after sunrise and the last hour before
-sunset. Plan your walks accordingly.
+## Hora aurea
+Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur aliquet quam id dui posuere blandit.
 :::
 
 ::: {.callout-warning}
-## Cherry blossom timing
-Peak bloom in Tokyo varies by 2-3 weeks year to year. Don't book flights until the
-forecast narrows down in early March.
+## Tempus florum
+Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Nulla porttitor accumsan tincidunt.
 :::
 
 ::: {.callout-important}
-## Visa requirements
-Check entry requirements well before your trip. Some countries require applications
-weeks in advance.
+## Requisita visa
+Cras ultricies ligula sed magna dictum porta. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
 :::
 
 ::: {.callout-caution collapse="true"}
-## Collapsible callout
-Click to expand. This is useful for long asides that would interrupt the flow of a post.
-You can put anything in here — text, images, code, tables.
+## Admonitio plicabilis
+Preme ad expandendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 :::
 
-## Columns
+## Columnae
 
 :::: {.columns}
 ::: {.column width="50%"}
-**Left column** — useful for placing text alongside an image, comparing two photos, or
-breaking up a wall of text. Columns stack vertically on mobile.
+**Columna sinistra** — utilis ad textum iuxta imaginem ponendum, duas imagines comparandum, vel murum textus frangendum. Columnae in mobilibus verticaliter disponuntur.
 :::
 
 ::: {.column width="50%"}
-![Ramen](https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=400){group="cols" description="Tonkotsu ramen."}
+![Ius caldum](https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=400){group="cols" description="Ius caldum porcinum."}
 :::
 ::::
 
-Uneven split (30/70):
+Divisio inaequalis (30/70):
 
 :::: {.columns}
 ::: {.column width="30%"}
-**Narrow sidebar.** Good for captions, metadata, or short annotations next to a
-larger block of content.
+**Barra lateralis angusta.** Bona pro titulis, metadatis, vel annotationibus brevibus iuxta maiorem partem contentus.
 :::
 
 ::: {.column width="70%"}
-The wider column carries the main content. This layout works well when you want to
-annotate a photo or add context without taking up a full row. The asymmetry draws the
-eye to the larger side.
+Columna latior contentum principale portat. Haec compositio bene operatur cum imaginem annotare vel contextum addere vis sine pleno ordine occupando. Asymmetria oculum ad latus maius trahit.
 :::
 ::::
 
-## Tabsets
+## Tabulata
 
 ::: {.panel-tabset}
-## Morning
+## Mane
 
-Coffee at the hotel, then a long walk through quiet residential streets before the
-crowds wake up. Best time for photos — soft light, empty sidewalks.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Optimum tempus pro imaginibus — lux mollis, semitae vacuae.
 
-## Afternoon
+## Post Meridiem
 
-Museums, markets, or just sitting in a park. This is when jet lag catches up. A nap
-is not defeat; it's strategy.
+Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed.
 
-## Evening
+## Vespere
 
-Find somewhere to eat. No reservations, just walk until something looks right. The
-best meals on every trip have been unplanned.
+Cras ultricies ligula sed magna dictum porta. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada.
 :::
 
-## Lists
+## Indices
 
-Unordered:
+Non ordinatum:
 
-- Pack light — one bag, carry-on only
-- Learn three phrases in the local language
-- Leave room for getting lost
-  - Literally (wrong turns lead to discoveries)
-  - Figuratively (skip the itinerary sometimes)
+- Lorem ipsum dolor sit amet
+- Consectetur adipiscing elit
+- Sed do eiusmod tempor
+  - Incididunt ut labore (lorem ipsum)
+  - Et dolore magna aliqua (dolor sit amet)
 
-Ordered:
+Ordinatum:
 
-1. Book flights
-2. Find a place to stay
-3. Make a loose list of neighborhoods to explore
-4. Throw away the list on day two
+1. Curabitur aliquet quam
+2. Vivamus magna justo
+3. Lacinia eget consectetur sed
+4. Convallis at tellus
 
-Definition list:
+Index definitionum:
 
 Hanami
-: The Japanese tradition of enjoying the beauty of cherry blossoms. Usually involves
-  sitting under the trees with food and drink.
+: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 Bouquinistes
-: The open-air booksellers along the banks of the Seine in Paris. Their green metal
-  boxes have been there since the 16th century.
+: Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur aliquet quam id dui posuere blandit.
 
 Konbini
-: Japanese convenience stores (7-Eleven, Lawson, FamilyMart). Far better than the
-  name suggests — fresh onigiri, good coffee, usable ATMs.
+: Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Nulla porttitor accumsan tincidunt.
 
-## Footnotes
+## Notae Pedis
 
-The Meguro River walk is roughly 3.8 km from Ikejiri-Ohashi to Meguro station[^1].
-The best section for photos is the middle third, between Nakameguro and the highway
-overpass[^2].
+Lorem ipsum dolor sit amet, consectetur adipiscing elit circa 3.8 km[^1]. Optima sectio pro imaginibus est tertia media, inter duo puncta[^2].
 
-[^1]: You can start from either end. The Nakameguro station entrance drops you right
-      into the densest stretch of trees.
+[^1]: Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.
 
-[^2]: Arrive before 7 AM if you want photos without crowds. By 10 AM the path is
-      shoulder-to-shoulder.
+[^2]: Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed.
 
-## Horizontal Rule
+## Regula Horizontalis
 
-Content above the rule.
+Contentum supra regulam.
 
 * * *
 
-Content below the rule. Use `* * *` in Quarto — not `---`, which is interpreted as
-a YAML delimiter.
+Contentum infra regulam. Utere `* * *` in Quarto — non `---`, quod ut delimitator YAML interpretatur.
 
-## Math
+## Mathematica
 
-Inline math: the focal length and aperture relationship is $N = f / D$ where $N$ is the
-f-number, $f$ is focal length, and $D$ is the entrance pupil diameter.
+Inlineum: relatio longitudinis focalis et aperturae est $N = f / D$ ubi $N$ est numerus f, $f$ est longitudo focalis, et $D$ est diameter pupillae introitus.
 
-Display math:
+Ostentatio:
 
 $$
-\text{Exposure Value} = \log_2\!\left(\frac{N^2}{t}\right)
+\text{Valor Expositionis} = \log_2\!\left(\frac{N^2}{t}\right)
 $$
 
-where $N$ is the f-number and $t$ is exposure time in seconds.
+ubi $N$ est numerus f et $t$ est tempus expositionis in secundis.
