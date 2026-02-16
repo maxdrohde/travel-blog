@@ -1,2 +1,5 @@
 # Shared metadata for all trip posts
 toc: false
+include-before-body:
+  text: |
+    <a href="/" class="back-arrow">← Back</a>
