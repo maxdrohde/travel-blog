@@ -115,7 +115,7 @@
 
 /* Back arrow navigation — wrapper matches title block position */
 .back-arrow-wrapper {
-    margin-bottom: -0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .back-arrow {
