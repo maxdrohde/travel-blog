@@ -20,7 +20,7 @@ format:
     toc: false
     image-lazy-loading: true
     mainfont: "IBM Plex Sans, sans-serif"
-    fontsize: 18px
+    fontsize: 16px
     linestretch: 1.55
     max-width: 1000px
     include-in-header:
