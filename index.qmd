@@ -8,9 +8,6 @@ listing:
   template: listing-home.ejs
 ---
 
-::: {.hero}
-# Travel Blog
-:::
 
 ::: {#all-trips}
 :::
