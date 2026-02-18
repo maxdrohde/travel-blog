@@ -79,7 +79,7 @@
 .photo-strip {
     display: flex;
     gap: 6px;
-    overflow-x: auto;
+    overflow-x: scroll;
     scroll-snap-type: x mandatory;
     scrollbar-width: thin;
     scrollbar-color: #ccc transparent;
