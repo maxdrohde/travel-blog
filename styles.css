@@ -81,6 +81,7 @@
     gap: 6px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
+    scrollbar-width: none;
     padding: 1rem 0;
     margin: 2rem 0;
     -webkit-overflow-scrolling: touch;
@@ -251,11 +252,23 @@ div.quarto-post .metadata {
 }
 
 [data-bs-theme="dark"] .post-link {
-    color: #e0e0e0;
+    color: #e0e0e0 !important;
+}
+
+[data-bs-theme="dark"] .back-arrow {
+    color: #ccc;
 }
 
 [data-bs-theme="dark"] .back-arrow:hover {
     color: #d4845a;
+}
+
+[data-bs-theme="dark"] .post-year {
+    color: #bbb;
+}
+
+[data-bs-theme="dark"] .quarto-title-meta {
+    color: #bbb;
 }
 
 [data-bs-theme="dark"] .quarto-listing .card {
