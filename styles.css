@@ -81,7 +81,8 @@
     gap: 6px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    scrollbar-width: none;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc transparent;
     padding: 1rem 0;
     margin: 2rem 0;
     -webkit-overflow-scrolling: touch;
@@ -96,7 +97,20 @@
 }
 
 .photo-strip::-webkit-scrollbar {
-    height: 0;
+    height: 6px;
+}
+
+.photo-strip::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.photo-strip::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+}
+
+.photo-strip::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
 }
 
 .photo-strip .quarto-figure {
@@ -270,6 +284,18 @@ body.quarto-dark .post-year {
 body.quarto-dark .quarto-title-meta,
 body.quarto-dark div.quarto-post .metadata {
     color: #bbb;
+}
+
+body.quarto-dark .photo-strip {
+    scrollbar-color: #444 transparent;
+}
+
+body.quarto-dark .photo-strip::-webkit-scrollbar-thumb {
+    background: #444;
+}
+
+body.quarto-dark .photo-strip::-webkit-scrollbar-thumb:hover {
+    background: #666;
 }
 
 body.quarto-dark .quarto-listing .card {
