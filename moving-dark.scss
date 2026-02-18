@@ -1,0 +1,101 @@
+/*-- scss:defaults --*/
+
+// Dark theme colors
+$body-bg: #1a1a1a;
+$body-color: #e0e0e0;
+$link-color: #d4845a;
+$font-size-base: 1rem;
+
+// Grey palette
+$gray-600: #828282;
+$gray-300: #444;
+$gray-800: #ccc;
+
+// Navbar
+$navbar-bg: $body-bg;
+$navbar-fg: $body-color;
+$navbar-light-color: $body-color;
+$navbar-light-hover-color: $link-color;
+$navbar-light-active-color: $link-color;
+
+// No rounded corners on cards
+$border-radius: 3px;
+
+/*-- scss:rules --*/
+
+// Typography — IBM Plex Sans
+body {
+    font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
+    font-kerning: normal;
+}
+
+// Headings — bold
+h1, h2, h3, h4, h5, h6 {
+    font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 700;
+    margin-top: 2rem;
+    color: $body-color;
+}
+
+// Links — warm orange, no underline until hover
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+// Footer
+.nav-footer {
+    border-top: 1px solid $gray-300;
+    color: $gray-600;
+    font-size: 0.85rem;
+}
+
+// Post meta text
+.metadata, .listing-date, .listing-author {
+    color: darken($body-color, 25%);
+    font-size: 1rem;
+}
+
+// Blockquotes
+blockquote {
+    color: $gray-600;
+    border-left: 4px solid $gray-300;
+    padding-left: 15px;
+    letter-spacing: -0.5px;
+}
+
+// Code blocks
+pre, code {
+    font-size: 0.9em;
+    border-radius: 3px;
+    background-color: #252525;
+}
+
+// Images
+.photo-wide img {
+    border-radius: 3px;
+}
+
+// Tables
+table {
+    border-collapse: collapse;
+    width: 100%;
+    color: darken($body-color, 10%);
+
+    th {
+        background-color: #252525;
+    }
+
+    tr:nth-child(even) {
+        background-color: #222;
+    }
+
+    th, td {
+        padding: 10px 15px;
+        border: 1px solid $gray-300;
+    }
+}

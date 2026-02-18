@@ -75,6 +75,42 @@
     }
 }
 
+/* Horizontal scroll strip */
+.photo-strip {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 1rem 0;
+    margin: 2rem 0;
+    -webkit-overflow-scrolling: touch;
+}
+
+.photo-strip img {
+    scroll-snap-align: start;
+    height: 300px;
+    width: auto;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.photo-strip::-webkit-scrollbar {
+    height: 0;
+}
+
+.photo-strip .quarto-figure {
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.photo-strip .quarto-figure figure {
+    margin: 0;
+}
+
+.photo-strip .quarto-figure figure p {
+    margin: 0;
+}
+
 /* Listing cards — clean, minimal */
 .quarto-listing .card {
     border: 1px solid #ddd;
@@ -146,6 +182,7 @@ div.quarto-post .metadata {
 .quarto-title-meta {
     font-size: 0.85rem;
     color: #999;
+    font-family: "IBM Plex Mono", monospace;
 }
 
 /* Hide "Published" label, show only the date */
@@ -159,9 +196,10 @@ div.quarto-post .metadata {
 }
 
 .post-year {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #2c2c2c;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #999;
     margin-top: 2rem;
     margin-bottom: 0.25rem;
 }
@@ -179,4 +217,51 @@ div.quarto-post .metadata {
 
 .post-link:hover {
     text-decoration: underline;
+}
+
+/* Minimal navbar — only holds the dark mode toggle */
+.navbar {
+    background: transparent !important;
+    border: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    min-height: 0 !important;
+    padding: 0.5rem 1rem !important;
+}
+
+.navbar .navbar-brand-container {
+    display: none !important;
+}
+
+.navbar-collapse {
+    display: none !important;
+}
+
+#quarto-search {
+    display: none !important;
+}
+
+/* Dark mode overrides */
+[data-bs-theme="dark"] .hero h1 {
+    color: #e0e0e0;
+}
+
+[data-bs-theme="dark"] .hero p {
+    color: #999;
+}
+
+[data-bs-theme="dark"] .post-link {
+    color: #e0e0e0;
+}
+
+[data-bs-theme="dark"] .back-arrow:hover {
+    color: #d4845a;
+}
+
+[data-bs-theme="dark"] .quarto-listing .card {
+    border-color: #333;
+}
+
+[data-bs-theme="dark"] .quarto-listing .card:hover {
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
 }
