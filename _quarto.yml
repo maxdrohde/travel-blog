@@ -21,7 +21,7 @@ format:
     image-lazy-loading: true
     mainfont: "IBM Plex Sans, sans-serif"
     fontsize: 16px
-    linestretch: 1.55
+    linestretch: 1.4
     max-width: 1000px
     include-in-header:
       text: |
