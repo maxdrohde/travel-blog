@@ -243,38 +243,39 @@ div.quarto-post .metadata {
 }
 
 /* Dark mode overrides */
-[data-bs-theme="dark"] .hero h1 {
+body.quarto-dark .hero h1 {
     color: #e0e0e0;
 }
 
-[data-bs-theme="dark"] .hero p {
+body.quarto-dark .hero p {
     color: #999;
 }
 
-[data-bs-theme="dark"] .post-link {
+body.quarto-dark .post-link {
     color: #e0e0e0 !important;
 }
 
-[data-bs-theme="dark"] .back-arrow {
+body.quarto-dark .back-arrow {
     color: #ccc;
 }
 
-[data-bs-theme="dark"] .back-arrow:hover {
+body.quarto-dark .back-arrow:hover {
     color: #d4845a;
 }
 
-[data-bs-theme="dark"] .post-year {
+body.quarto-dark .post-year {
     color: #bbb;
 }
 
-[data-bs-theme="dark"] .quarto-title-meta {
+body.quarto-dark .quarto-title-meta,
+body.quarto-dark div.quarto-post .metadata {
     color: #bbb;
 }
 
-[data-bs-theme="dark"] .quarto-listing .card {
+body.quarto-dark .quarto-listing .card {
     border-color: #333;
 }
 
-[data-bs-theme="dark"] .quarto-listing .card:hover {
+body.quarto-dark .quarto-listing .card:hover {
     box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
 }
