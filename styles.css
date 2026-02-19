@@ -79,13 +79,18 @@
 .photo-strip {
     display: flex;
     gap: 6px;
-    overflow-x: scroll;
+    overflow-x: auto;
     scroll-snap-type: x mandatory;
-    scrollbar-width: thin;
-    scrollbar-color: #ccc #f0ede8;
+    scrollbar-width: none;
     padding: 1rem 0;
     margin: 2rem 0;
     -webkit-overflow-scrolling: touch;
+    -webkit-mask-image: linear-gradient(to right, black 85%, transparent 100%);
+    mask-image: linear-gradient(to right, black 85%, transparent 100%);
+}
+
+.photo-strip::-webkit-scrollbar {
+    height: 0;
 }
 
 .photo-strip img {
@@ -94,24 +99,6 @@
     width: auto;
     flex-shrink: 0;
     cursor: pointer;
-}
-
-.photo-strip::-webkit-scrollbar {
-    height: 6px;
-}
-
-.photo-strip::-webkit-scrollbar-track {
-    background: #f0ede8;
-    border-radius: 3px;
-}
-
-.photo-strip::-webkit-scrollbar-thumb {
-    background: #ccc;
-    border-radius: 3px;
-}
-
-.photo-strip::-webkit-scrollbar-thumb:hover {
-    background: #aaa;
 }
 
 .photo-strip .quarto-figure {
@@ -285,22 +272,6 @@ body.quarto-dark .post-year {
 body.quarto-dark .quarto-title-meta,
 body.quarto-dark div.quarto-post .metadata {
     color: #bbb;
-}
-
-body.quarto-dark .photo-strip {
-    scrollbar-color: #444 #222;
-}
-
-body.quarto-dark .photo-strip::-webkit-scrollbar-track {
-    background: #222;
-}
-
-body.quarto-dark .photo-strip::-webkit-scrollbar-thumb {
-    background: #444;
-}
-
-body.quarto-dark .photo-strip::-webkit-scrollbar-thumb:hover {
-    background: #666;
 }
 
 body.quarto-dark .quarto-listing .card {
