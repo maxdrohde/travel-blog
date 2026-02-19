@@ -834,6 +834,8 @@ graph LR
 ### Graphviz
 
 ```{dot}
+//| fig-cap: "Tokyo itinerary"
+//| label: fig-graphviz
 digraph {
     rankdir=LR
     node [shape=box style=rounded fontname="IBM Plex Sans"]
