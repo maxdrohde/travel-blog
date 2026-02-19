@@ -2,7 +2,7 @@
 title: ""
 listing:
   id: all-trips
-  contents: trips
+  contents: 000-trips
   sort: date desc
   type: custom
   template: styles/listing-home.ejs

@@ -13,7 +13,7 @@ travel-blog/
 │   ├── styles.css       # Custom styling
 │   └── listing-home.ejs # Homepage listing template
 ├── index.qmd            # Homepage with trip listing
-└── trips/
+└── 000-trips/
     ├── _metadata.yml    # Shared settings for trip posts
     ├── 2024-12-paris/
     │   └── index.qmd    # Example trip post
@@ -23,10 +23,10 @@ travel-blog/
 
 ## Adding a New Trip
 
-Create a folder under `trips/` with an `index.qmd`:
+Create a folder under `000-trips/` with an `index.qmd`:
 
 ```
-trips/2025-07-iceland/index.qmd
+000-trips/2025-07-iceland/index.qmd
 ```
 
 With YAML front matter like:
@@ -71,7 +71,7 @@ Raw photos are automatically resized and compressed before the site builds. Drop
 
 ```
 _photos/2025-07-iceland/hero.jpg      # Raw original (gitignored)
-  → trips/2025-07-iceland/hero.jpg    # Optimized JPEG (committed)
+  → 000-trips/2025-07-iceland/hero.jpg    # Optimized JPEG (committed)
 ```
 
 - Max width: 1600px (aspect ratio preserved, no upscaling)
