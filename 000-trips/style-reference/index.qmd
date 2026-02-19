@@ -727,7 +727,7 @@ Three views of Tokyo
 Add `#fig-label` to an image to create a numbered figure that can be referenced
 elsewhere in the text with `@fig-label`.
 
-![Cherry blossoms along the Meguro River](https://images.unsplash.com/photo-1522383225653-ed111181a951?w=1200&auto=format&q=80){#fig-meguro group="crossref" description="Peak bloom along the Meguro River canal." width="1200" height="800"}
+![Cherry blossoms along the Meguro River](https://images.unsplash.com/photo-1522383225653-ed111181a951?w=1200&auto=format&q=80){#fig-meguro group="crossref" description="Peak bloom along the Meguro River canal." width="70%"}
 
 As shown in @fig-meguro, the Meguro River is one of the best spots for cherry
 blossoms in Tokyo. Cross-references automatically generate numbered labels and
