@@ -2,7 +2,7 @@
 set -euo pipefail
 
 PHOTOS_DIR="original-photos"
-TRIPS_DIR="000-trips"
+TRIPS_DIR="trips"
 MAX_WIDTH=1600
 QUALITY=80
 

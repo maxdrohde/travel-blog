@@ -15,7 +15,7 @@ Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur
 
 ## Along the Seine
 
-::: {.photo-wide}
+::: {.photo-grid .cols-1}
 ![The Seine at golden hour](https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1200&auto=format&q=80){group="paris" description="The Seine at golden hour, with the Eiffel Tower in the distance." width="1200" height="800"}
 :::
 

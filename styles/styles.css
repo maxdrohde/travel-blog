@@ -36,8 +36,7 @@
 .photo-grid.cols-5 { grid-template-columns: repeat(5, 1fr); }
 .photo-grid.cols-6 { grid-template-columns: repeat(6, 1fr); }
 
-.photo-grid img,
-.photo-wide img {
+.photo-grid img {
     cursor: pointer;
 }
 
@@ -197,14 +196,6 @@
     object-fit: cover;
 }
 
-/* Single wide image layout */
-.photo-wide img {
-    width: 100%;
-    max-height: 500px;
-    object-fit: cover;
-    border-radius: 3px;
-    margin: 1.5rem 0;
-}
 
 /* Back arrow navigation — wrapper matches title block position */
 .back-arrow-wrapper {

@@ -17,7 +17,7 @@ Cras ultricies ligula sed magna dictum porta. Mauris blandit aliquet elit, eget 
 
 ## Sakura Highlights
 
-::: {.photo-wide}
+::: {.photo-grid .cols-1}
 ![Cherry blossoms along the Meguro River](https://images.unsplash.com/photo-1522383225653-ed111181a951?w=1200&auto=format&q=80){group="tokyo" description="Peak bloom along the Meguro River canal." width="1200" height="800"}
 :::
 
