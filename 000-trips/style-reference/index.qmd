@@ -258,12 +258,100 @@ Nested blockquote:
 
 ## Tables
 
+### Plain
+
 | City | Season | Days | Highlight |
 |------|--------|------|-----------|
 | Paris | Winter | 7 | Seine at sunset |
 | Tokyo | Spring | 14 | Cherry blossoms at Meguro River |
 | Kyoto | Autumn | 5 | Fushimi Inari at dawn |
 | Lisbon | Summer | 4 | Tram 28 through Alfama |
+
+### Column Alignment
+
+Right-align numbers, left-align text, center short labels:
+
+| Route | Transport | Distance | Cost |
+|:------|:---------:|---------:|-----:|
+| Tokyo → Kyoto | Shinkansen | 476 km | ¥13,320 |
+| Kyoto → Nara | JR Line | 42 km | ¥720 |
+| Nara → Osaka | Kintetsu | 33 km | ¥680 |
+| Osaka → Hiroshima | Shinkansen | 342 km | ¥10,440 |
+
+### Striped
+
+::: {.striped}
+
+| Day | Morning | Afternoon | Evening |
+|-----|---------|-----------|---------|
+| Mon | Tsukiji Market | TeamLab Borderless | Shibuya izakaya |
+| Tue | Meiji Shrine | Harajuku & Omotesando | Shinjuku Golden Gai |
+| Wed | Senso-ji Temple | Akihabara | Ramen in Ikebukuro |
+| Thu | Shinjuku Gyoen | Shimokitazawa | Yakitori in Yurakucho |
+| Fri | Yanaka old town | Ueno museums | Roppongi night views |
+| Sat | Day trip to Kamakura | Great Buddha & beach | Enoshima sunset |
+| Sun | Toyosu fish market | Ginza shopping | Departure |
+
+:::
+
+### Striped + Hover
+
+::: {.striped .hover}
+
+| Accommodation | City | Nights | Per Night |
+|:--------------|:-----|-------:|----------:|
+| Hôtel des Grands Boulevards | Paris | 4 | €185 |
+| Noku Kyoto | Kyoto | 3 | ¥22,000 |
+| The Millennials Shibuya | Tokyo | 5 | ¥8,500 |
+| Santiago de Alfama | Lisbon | 3 | €145 |
+| Casa Camper | Barcelona | 2 | €195 |
+
+:::
+
+### Bordered
+
+::: {.bordered}
+
+| Phrase | Japanese | Pronunciation |
+|:-------|:---------|:--------------|
+| Thank you | ありがとう | Arigatō |
+| Excuse me | すみません | Sumimasen |
+| Delicious | おいしい | Oishii |
+| Cheers | 乾杯 | Kanpai |
+| Where is...? | ...はどこですか？ | ...wa doko desu ka? |
+
+:::
+
+### Compact (sm)
+
+::: {.sm}
+
+| Item | Weight |
+|:-----|-------:|
+| Camera body | 557 g |
+| 23mm lens | 180 g |
+| 50mm lens | 200 g |
+| Batteries (×3) | 240 g |
+| Charger | 85 g |
+| SD cards (×4) | 8 g |
+| **Total** | **1,270 g** |
+
+:::
+
+### All Styles Combined
+
+::: {.striped .hover .bordered .sm}
+
+| # | City | Country | Days | Budget/Day | Rating |
+|--:|:-----|:--------|-----:|-----------:|:------:|
+| 1 | Tokyo | Japan | 14 | $120 | ★★★★★ |
+| 2 | Paris | France | 7 | $150 | ★★★★★ |
+| 3 | Lisbon | Portugal | 4 | $80 | ★★★★ |
+| 4 | Kyoto | Japan | 5 | $100 | ★★★★★ |
+| 5 | Barcelona | Spain | 3 | $110 | ★★★★ |
+| 6 | Seoul | South Korea | 6 | $90 | ★★★★ |
+
+:::
 
 ## Code Blocks
 
