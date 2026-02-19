@@ -56,6 +56,10 @@ photoMap = {
       return `${month} ${+d}, ${y} · ${hour}:${min} ${ampm}`;
     }
 
+    function badgeIconHtml(color, count) {
+      return `<div style="font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem; color: #fff; background: ${color}; border-radius: 50%; width: 16px; height: 16px; display: flex; align-items: center; justify-content: center; font-weight: 700;">${count}</div>`;
+    }
+
     function photoPopupHtml(photos, groupId) {
       if (photos.length === 1) {
         const loc = photos[0];
@@ -124,7 +128,7 @@ photoMap = {
       // Show count badge for grouped markers
       if (count > 1) {
         const badge = L.divIcon({
-          html: `<div style="font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem; color: #fff; background: ${accentColor()}; border-radius: 50%; width: 16px; height: 16px; display: flex; align-items: center; justify-content: center; font-weight: 700;">${count}</div>`,
+          html: badgeIconHtml(accentColor(), count),
           iconSize: [16, 16],
           iconAnchor: [8, 8],
           className: "photo-count-badge"
@@ -198,7 +202,7 @@ photoMap = {
       markers.forEach(m => {
         if (m.setStyle) m.setStyle({ fillColor: color });
         if (m._badgeCount) m.setIcon(L.divIcon({
-          html: `<div style="font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem; color: #fff; background: ${color}; border-radius: 50%; width: 16px; height: 16px; display: flex; align-items: center; justify-content: center; font-weight: 700;">${m._badgeCount}</div>`,
+          html: badgeIconHtml(color, m._badgeCount),
           iconSize: [16, 16], iconAnchor: [8, 8], className: "photo-count-badge"
         }));
       });

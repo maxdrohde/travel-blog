@@ -49,14 +49,8 @@
 }
 
 /* Reset margins inside photo grids */
-.photo-grid .quarto-figure {
-    margin: 0;
-}
-
-.photo-grid .quarto-figure figure {
-    margin: 0;
-}
-
+.photo-grid .quarto-figure,
+.photo-grid .quarto-figure figure,
 .photo-grid .quarto-figure figure p {
     margin: 0;
 }
