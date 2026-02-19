@@ -7,10 +7,12 @@ A Quarto website for hosting travel photos, built with a minimal clean theme, re
 ```
 travel-blog/
 ├── _quarto.yml          # Site config (navbar, theme, lightbox)
-├── styles.css           # Custom styling
-├── moving.scss          # Moving-inspired SCSS theme
-├── index.qmd            # Homepage with hero + trip grid
-├── about.qmd            # About page
+├── styles/
+│   ├── moving.scss      # Light SCSS theme
+│   ├── moving-dark.scss # Dark SCSS theme
+│   ├── styles.css       # Custom styling
+│   └── listing-home.ejs # Homepage listing template
+├── index.qmd            # Homepage with trip listing
 └── trips/
     ├── _metadata.yml    # Shared settings for trip posts
     ├── 2024-12-paris/

@@ -16,11 +16,11 @@ format:
     theme:
       light:
         - default
-        - moving.scss
+        - styles/moving.scss
       dark:
         - darkly
-        - moving-dark.scss
-    css: styles.css
+        - styles/moving-dark.scss
+    css: styles/styles.css
     lightbox:
       match: auto
       effect: none

@@ -5,7 +5,7 @@ listing:
   contents: trips
   sort: date desc
   type: custom
-  template: listing-home.ejs
+  template: styles/listing-home.ejs
 ---
 
 

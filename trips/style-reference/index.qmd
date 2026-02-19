@@ -277,8 +277,8 @@ format:
   html:
     theme:
       - default
-      - moving.scss
-    css: styles.css
+      - styles/moving.scss
+    css: styles/styles.css
     lightbox: true
 ```
 
