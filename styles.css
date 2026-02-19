@@ -83,10 +83,8 @@
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
     padding: 1rem 0;
-    margin: 2rem 0;
+    margin: 2rem 0 0.25rem;
     -webkit-overflow-scrolling: touch;
-    -webkit-mask-image: linear-gradient(to right, black 85%, transparent 100%);
-    mask-image: linear-gradient(to right, black 85%, transparent 100%);
 }
 
 .photo-strip::-webkit-scrollbar {
@@ -112,6 +110,29 @@
 
 .photo-strip .quarto-figure figure p {
     margin: 0;
+}
+
+.photo-strip + p:empty + .photo-strip-hint,
+.photo-strip ~ .photo-strip-hint {
+    text-align: center;
+}
+
+/* Scroll hint — sticky arrows at right edge of strip */
+.photo-strip::after {
+    content: "❯\A❯\A❯";
+    white-space: pre;
+    position: sticky;
+    right: 0;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 0 0.25rem 0 0.75rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #bbb;
+    opacity: 0.7;
+    background: var(--bs-body-bg, #faf8f5);
 }
 
 /* Listing cards — clean, minimal */
