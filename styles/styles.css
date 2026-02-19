@@ -388,7 +388,44 @@ img-comparison-slider {
     --default-handle-width: 40px;
 }
 
+img-comparison-slider img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
 body.quarto-dark img-comparison-slider {
     --divider-color: #d4845a;
     --default-handle-color: #d4845a;
+}
+
+/* Mermaid dark mode overrides */
+body.quarto-dark .mermaid rect,
+body.quarto-dark .mermaid .node rect {
+    fill: #2a2220 !important;
+    stroke: #d4845a !important;
+}
+
+body.quarto-dark .mermaid .node .label,
+body.quarto-dark .mermaid .nodeLabel {
+    color: #e8ddd5 !important;
+    fill: #e8ddd5 !important;
+}
+
+body.quarto-dark .mermaid .edgePath .path {
+    stroke: #d4845a !important;
+}
+
+body.quarto-dark .mermaid .edgeLabel {
+    background-color: #1a1a1a !important;
+    color: #e8ddd5 !important;
+}
+
+body.quarto-dark .mermaid .edgeLabel span {
+    color: #e8ddd5 !important;
+}
+
+body.quarto-dark .mermaid .marker {
+    fill: #d4845a !important;
+    stroke: #d4845a !important;
 }

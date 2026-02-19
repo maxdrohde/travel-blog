@@ -824,6 +824,8 @@ route maps, or timelines.
 ### Mermaid
 
 ```{mermaid}
+%%| fig-width: 5
+%%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#faeee8', 'primaryBorderColor': '#c4653a', 'primaryTextColor': '#3a2a1f', 'lineColor': '#c4653a', 'edgeLabelBackground': '#faf8f5', 'fontFamily': 'IBM Plex Sans'}}}%%
 graph LR
     A[Tokyo] -->|Shinkansen| B[Kyoto]
     B -->|Bus| C[Nara]
