@@ -80,6 +80,19 @@ pre, code {
     border-radius: 3px;
 }
 
+// Mermaid diagram colors
+:root {
+    --mermaid-bg-color: #1a1a1a;
+    --mermaid-node-bg-color: #382e2a;
+    --mermaid-node-fg-color: #d4845a;
+    --mermaid-fg-color: #e8ddd5;
+    --mermaid-label-fg-color: #e8ddd5;
+    --mermaid-label-bg-color: #1a1a1a;
+    --mermaid-edge-color: #d4845a;
+    --mermaid-font-family: "IBM Plex Sans", sans-serif;
+    --mermaid-font-weight: 400;
+}
+
 // Tables
 table {
     border-collapse: collapse;

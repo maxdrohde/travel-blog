@@ -53,4 +53,8 @@ include-after-body:
         marker.setStyle({ fillColor: dark ? "#d4845a" : "#c4653a" });
       }).observe(document.body, { attributes: true, attributeFilter: ["class"] });
     });
+    // Leaflet maps need a resize when revealed in a hidden tab
+    document.addEventListener("shown.bs.tab", function() {
+      window.dispatchEvent(new Event("resize"));
+    });
     </script>

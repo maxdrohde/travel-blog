@@ -855,7 +855,6 @@ route maps, or timelines.
 
 ```{mermaid}
 %%| fig-width: 5
-%%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#faeee8', 'primaryBorderColor': '#c4653a', 'primaryTextColor': '#3a2a1f', 'lineColor': '#c4653a', 'edgeLabelBackground': '#faf8f5', 'fontFamily': 'IBM Plex Sans'}}}%%
 graph LR
     A[Tokyo] -->|Shinkansen| B[Kyoto]
     B -->|Bus| C[Nara]
@@ -895,25 +894,25 @@ auto-advances and includes prev/next controls.
   <div class="carousel-inner" style="border-radius: 3px; overflow: hidden;">
     <div class="carousel-item active">
       <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=800&auto=format&q=80" class="d-block w-100" style="height: 400px; object-fit: cover;" alt="Shibuya crossing">
-      <div class="carousel-caption d-none d-md-block">
+      <div class="carousel-caption">
         <p>Shibuya crossing</p>
       </div>
     </div>
     <div class="carousel-item">
       <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&auto=format&q=80" class="d-block w-100" style="height: 400px; object-fit: cover;" alt="Temple gate">
-      <div class="carousel-caption d-none d-md-block">
+      <div class="carousel-caption">
         <p>Senso-ji temple</p>
       </div>
     </div>
     <div class="carousel-item">
       <img src="https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=800&auto=format&q=80" class="d-block w-100" style="height: 400px; object-fit: cover;" alt="Neon at night">
-      <div class="carousel-caption d-none d-md-block">
+      <div class="carousel-caption">
         <p>Shinjuku neon</p>
       </div>
     </div>
     <div class="carousel-item">
       <img src="https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=800&auto=format&q=80" class="d-block w-100" style="height: 400px; object-fit: cover;" alt="Ramen">
-      <div class="carousel-caption d-none d-md-block">
+      <div class="carousel-caption">
         <p>Tonkotsu ramen</p>
       </div>
     </div>

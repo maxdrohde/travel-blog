@@ -147,6 +147,27 @@
     filter: grayscale(0%);
 }
 
+/* Carousel captions — frosted pill over image */
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 100px;
+    padding: 0.4rem 1.2rem !important;
+    bottom: 3rem !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%);
+    width: auto !important;
+}
+
+.carousel-caption p {
+    margin: 0;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.02em;
+}
+
 /* Listing cards — clean, minimal */
 .quarto-listing .card {
     border: 1px solid #ddd;
@@ -395,39 +416,34 @@ body.quarto-dark img-comparison-slider {
     --default-handle-color: #d4845a;
 }
 
+/* Mermaid edge label overrides — fix backgrounds for light/dark themes */
+.edgeLabel {
+    background-color: var(--mermaid-label-bg-color) !important;
+    color: var(--mermaid-label-fg-color) !important;
+}
+
+.edgeLabel p {
+    background-color: var(--mermaid-label-bg-color) !important;
+    color: var(--mermaid-label-fg-color) !important;
+}
+
+.edgeLabel rect {
+    fill: var(--mermaid-label-bg-color) !important;
+}
+
+body.quarto-dark {
+    --mermaid-bg-color: #1a1a1a;
+    --mermaid-node-bg-color: #382e2a;
+    --mermaid-node-fg-color: #d4845a;
+    --mermaid-fg-color: #e8ddd5;
+    --mermaid-label-fg-color: #e8ddd5;
+    --mermaid-label-bg-color: #1a1a1a;
+    --mermaid-edge-color: #d4845a;
+}
+
 /* Graphviz SVGs: scale to fit container (override Quarto inline styles) */
-.cell-output-display:not(:has(.mermaid)) svg {
+.cell-output-display:not(:has(.mermaid)):not(:has(.leaflet-container)) svg {
     max-width: 100% !important;
     height: auto !important;
 }
 
-/* Mermaid dark mode overrides */
-body.quarto-dark .mermaid rect,
-body.quarto-dark .mermaid .node rect {
-    fill: #2a2220 !important;
-    stroke: #d4845a !important;
-}
-
-body.quarto-dark .mermaid .node .label,
-body.quarto-dark .mermaid .nodeLabel {
-    color: #e8ddd5 !important;
-    fill: #e8ddd5 !important;
-}
-
-body.quarto-dark .mermaid .edgePath .path {
-    stroke: #d4845a !important;
-}
-
-body.quarto-dark .mermaid .edgeLabel {
-    background-color: #1a1a1a !important;
-    color: #e8ddd5 !important;
-}
-
-body.quarto-dark .mermaid .edgeLabel span {
-    color: #e8ddd5 !important;
-}
-
-body.quarto-dark .mermaid .marker {
-    fill: #d4845a !important;
-    stroke: #d4845a !important;
-}

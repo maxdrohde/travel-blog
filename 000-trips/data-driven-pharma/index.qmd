@@ -32,12 +32,3 @@ A few snapshots from the conference venue area.
 {{< include ../../_includes/photo-map.qmd >}}
 
 :::
-
-```{=html}
-<script>
-// Leaflet maps need a resize when revealed in a hidden tab
-document.addEventListener("shown.bs.tab", function() {
-  window.dispatchEvent(new Event("resize"));
-});
-</script>
-```
