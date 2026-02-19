@@ -21,8 +21,7 @@ include-after-body:
       var lng = parseFloat(el.dataset.lng);
       var zoom = parseInt(el.dataset.zoom) || 5;
       var label = el.dataset.label || "";
-      var LIGHT_URL = "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png";
-      var DARK_URL = "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png";
+      var TILE_URL = "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png";
       var TILE_OPTS = { subdomains: "abcd", maxZoom: 19 };
       function isDark() { return document.body.classList.contains("quarto-dark"); }
       var map = L.map(el, {
@@ -32,7 +31,7 @@ include-after-body:
         doubleClickZoom: false, touchZoom: false,
         boxZoom: false, keyboard: false
       });
-      var tileLayer = L.tileLayer(isDark() ? DARK_URL : LIGHT_URL, TILE_OPTS).addTo(map);
+      var tileLayer = L.tileLayer(TILE_URL, TILE_OPTS).addTo(map);
       var marker = L.circleMarker([lat, lng], {
         radius: 7, fillColor: isDark() ? "#d4845a" : "#c4653a",
         color: "#fff", weight: 2, fillOpacity: 0.9
@@ -48,8 +47,6 @@ include-after-body:
         var dark = isDark();
         if (dark === wasDark) return;
         wasDark = dark;
-        map.removeLayer(tileLayer);
-        tileLayer = L.tileLayer(dark ? DARK_URL : LIGHT_URL, TILE_OPTS).addTo(map);
         marker.setStyle({ fillColor: dark ? "#d4845a" : "#c4653a" });
       }).observe(document.body, { attributes: true, attributeFilter: ["class"] });
     });

@@ -265,6 +265,17 @@ div.quarto-post .metadata {
     text-decoration: none;
 }
 
+.post-link::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: rgba(196, 101, 58, 0.5);
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
 .post-link:hover {
     text-decoration: underline;
 }
@@ -302,6 +313,10 @@ body.quarto-dark .hero p {
 
 body.quarto-dark .post-link {
     color: #e0e0e0 !important;
+}
+
+body.quarto-dark .post-link::before {
+    background-color: rgba(212, 132, 90, 0.5);
 }
 
 body.quarto-dark .back-arrow {
@@ -355,6 +370,10 @@ body.quarto-dark .quarto-listing .card:hover {
 
 body.quarto-dark .trip-map {
     border-color: #333;
+}
+
+body.quarto-dark .leaflet-tile-pane {
+    filter: invert(1) hue-rotate(180deg) brightness(0.95) contrast(0.9);
 }
 
 body.quarto-dark .trip-map-label.leaflet-tooltip {
