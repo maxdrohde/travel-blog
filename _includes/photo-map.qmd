@@ -29,7 +29,6 @@ photoMap = {
   };
   const isDark = () => document.body.classList.contains("quarto-dark");
   const accentColor = () => isDark() ? "#d4845a" : "#c4653a";
-  const timestampColor = () => isDark() ? "#bbb" : "#999";
 
   const container = html`<div style="margin: 2rem 0;">
     <div style="height: 600px; width: 100%; border-radius: 3px;"></div>
@@ -60,22 +59,27 @@ photoMap = {
     }
 
     function photoPopupHtml(photos, groupId) {
-      if (photos.length === 1) {
-        const loc = photos[0];
-        return `<a href="${loc.file}" class="glightbox" data-gallery="map-${groupId}" data-description="${loc.date ? formatDate(loc.date) : ''}" style="cursor: pointer;">` +
-          `<img src="${loc.file}" style="max-width: 200px; border-radius: 4px; display: block;">` +
-          `</a>` +
-          (loc.date ? `<div style="font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; color: ${timestampColor()}; text-align: center; margin-top: 4px;">${formatDate(loc.date)}</div>` : "");
-      }
-      const items = photos.map(loc =>
-        `<div style="flex-shrink: 0;">` +
+      const cid = `mapCarousel-${groupId}`;
+      const multi = photos.length > 1;
+      const indicators = multi ? `<div class="carousel-indicators">${photos.map((_, i) =>
+        `<button type="button" data-bs-target="#${cid}" data-bs-slide-to="${i}"${i === 0 ? ' class="active"' : ''}></button>`
+      ).join("")}</div>` : "";
+      const slides = photos.map((loc, i) =>
+        `<div class="carousel-item${i === 0 ? ' active' : ''}">` +
         `<a href="${loc.file}" class="glightbox" data-gallery="map-${groupId}" data-description="${loc.date ? formatDate(loc.date) : ''}" style="cursor: pointer;">` +
-        `<img src="${loc.file}" style="width: 200px; border-radius: 4px; display: block;">` +
+        `<img src="${loc.file}" class="d-block w-100" style="height: 200px; object-fit: cover;" alt="">` +
         `</a>` +
-        (loc.date ? `<div style="font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; color: ${timestampColor()}; text-align: center; margin-top: 4px;">${formatDate(loc.date)}</div>` : "") +
+        (loc.date ? `<div class="carousel-caption"><p>${formatDate(loc.date)}</p></div>` : "") +
         `</div>`
       ).join("");
-      return `<div style="display: flex; gap: 8px; overflow-x: auto; scroll-snap-type: x mandatory;">${items}</div>`;
+      const controls = multi ?
+        `<button class="carousel-control-prev" type="button" data-bs-target="#${cid}" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>` +
+        `<button class="carousel-control-next" type="button" data-bs-target="#${cid}" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>` : "";
+      return `<div id="${cid}" class="carousel slide" data-bs-ride="false" style="width: 280px; border-radius: 4px; overflow: hidden;">` +
+        indicators +
+        `<div class="carousel-inner">${slides}</div>` +
+        controls +
+        `</div>`;
     }
 
     // Group photos by location (round to ~10m precision to catch near-duplicates)
@@ -107,7 +111,7 @@ photoMap = {
       }).addTo(map);
 
       const popupContent = photoPopupHtml(g.photos, gid);
-      const popupMaxWidth = count > 1 ? 420 : 210;
+      const popupMaxWidth = 300;
 
       const popupOpts = {
         minWidth: 50, maxWidth: popupMaxWidth, closeButton: false, className: "photo-popup"
@@ -115,8 +119,12 @@ photoMap = {
       marker.bindPopup(popupContent, popupOpts);
       hitArea.bindPopup(popupContent, popupOpts);
 
-      // Initialize GLightbox on popup links after popup opens
+      // Initialize carousel + GLightbox on popup links after popup opens
       function onPopupOpen() {
+        const carouselEl = document.getElementById(`mapCarousel-${gid}`);
+        if (carouselEl && typeof bootstrap !== "undefined") {
+          new bootstrap.Carousel(carouselEl, { ride: false, interval: false });
+        }
         if (typeof GLightbox !== "undefined") {
           GLightbox({ selector: `.glightbox[data-gallery="map-${gid}"]` });
         }
