@@ -3,8 +3,8 @@ set -euo pipefail
 
 PHOTOS_DIR="original-photos"
 TRIPS_DIR="trips"
-MAX_WIDTH=1600
-QUALITY=80
+MAX_WIDTH=2000
+QUALITY=85
 
 # Nothing to do if original-photos/ doesn't exist or is empty
 if [ ! -d "$PHOTOS_DIR" ]; then
