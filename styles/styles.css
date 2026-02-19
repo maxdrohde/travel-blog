@@ -399,6 +399,12 @@ body.quarto-dark img-comparison-slider {
     --default-handle-color: #d4845a;
 }
 
+/* Graphviz SVGs: scale to fit container */
+.cell[data-engine="dot"] svg {
+    max-width: 100%;
+    height: auto;
+}
+
 /* Mermaid dark mode overrides */
 body.quarto-dark .mermaid rect,
 body.quarto-dark .mermaid .node rect {
