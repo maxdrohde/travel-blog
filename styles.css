@@ -82,7 +82,7 @@
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     scrollbar-width: thin;
-    scrollbar-color: #ccc transparent;
+    scrollbar-color: #ccc #f0ede8;
     padding: 1rem 0;
     margin: 2rem 0;
     -webkit-overflow-scrolling: touch;
@@ -101,7 +101,8 @@
 }
 
 .photo-strip::-webkit-scrollbar-track {
-    background: transparent;
+    background: #f0ede8;
+    border-radius: 3px;
 }
 
 .photo-strip::-webkit-scrollbar-thumb {
@@ -287,7 +288,11 @@ body.quarto-dark div.quarto-post .metadata {
 }
 
 body.quarto-dark .photo-strip {
-    scrollbar-color: #444 transparent;
+    scrollbar-color: #444 #222;
+}
+
+body.quarto-dark .photo-strip::-webkit-scrollbar-track {
+    background: #222;
 }
 
 body.quarto-dark .photo-strip::-webkit-scrollbar-thumb {
