@@ -86,6 +86,10 @@ The script runs automatically via Quarto's `pre-render` hook, or manually:
 bash scripts/optimize-images.sh
 ```
 
+## Handdrawn Content
+
+Add handdrawn elements like trip schedules, itineraries, or sketches — either exported from GoodNotes on iPad or scanned from paper. Drop them into the trip folder alongside photos and include them in posts like any other image.
+
 ## Development
 
 Preview the site locally:
