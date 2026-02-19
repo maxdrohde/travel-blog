@@ -79,9 +79,9 @@ to change the column count. Showing all 6 layouts below.
 ![Train platform](https://images.unsplash.com/photo-1565618754154-c8011e5df2a6?w=600&auto=format&q=80){group="demo"}
 :::
 
-## Multi-Row Grids
+### Multi-Row Grids
 
-### 3 columns, 2 full rows (6 images)
+#### 3 columns, 2 full rows (6 images)
 
 ::: {.photo-grid .cols-3}
 ![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600&auto=format&q=80){group="multi"}
@@ -97,7 +97,7 @@ to change the column count. Showing all 6 layouts below.
 ![Train platform](https://images.unsplash.com/photo-1565618754154-c8011e5df2a6?w=600&auto=format&q=80){group="multi"}
 :::
 
-### 4 columns, 3 rows (12 images)
+#### 4 columns, 3 rows (12 images)
 
 ::: {.photo-grid}
 ![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600&auto=format&q=80){group="multi"}
@@ -125,9 +125,9 @@ to change the column count. Showing all 6 layouts below.
 ![Pond reflection](https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=600&auto=format&q=80){group="multi"}
 :::
 
-## Incomplete Last Row
+### Incomplete Last Row
 
-### 3 columns, 5 images (last row has 2)
+#### 3 columns, 5 images (last row has 2)
 
 ::: {.photo-grid .cols-3}
 ![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600&auto=format&q=80){group="partial"}
@@ -141,7 +141,7 @@ to change the column count. Showing all 6 layouts below.
 ![Tokyo Tower](https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=600&auto=format&q=80){group="partial"}
 :::
 
-### 4 columns, 7 images (last row has 3)
+#### 4 columns, 7 images (last row has 3)
 
 ::: {.photo-grid}
 ![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600&auto=format&q=80){group="partial"}
@@ -159,7 +159,7 @@ to change the column count. Showing all 6 layouts below.
 ![Tsukiji market](https://images.unsplash.com/photo-1553621042-f6e147245754?w=600&auto=format&q=80){group="partial"}
 :::
 
-### 4 columns, 6 images (last row has 2)
+#### 4 columns, 6 images (last row has 2)
 
 ::: {.photo-grid}
 ![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600&auto=format&q=80){group="partial"}
@@ -175,7 +175,7 @@ to change the column count. Showing all 6 layouts below.
 ![Train platform](https://images.unsplash.com/photo-1565618754154-c8011e5df2a6?w=600&auto=format&q=80){group="partial"}
 :::
 
-### 5 columns, 7 images (last row has 2)
+#### 5 columns, 7 images (last row has 2)
 
 ::: {.photo-grid .cols-5}
 ![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600&auto=format&q=80){group="partial"}
@@ -193,6 +193,25 @@ to change the column count. Showing all 6 layouts below.
 ![Tsukiji market](https://images.unsplash.com/photo-1553621042-f6e147245754?w=600&auto=format&q=80){group="partial"}
 :::
 
+### Grayscale-to-Color Hover
+
+The `.photo-grid.grayscale` modifier starts images in black & white. Hovering reveals
+full color with a smooth transition.
+
+::: {.photo-grid .cols-3 .grayscale}
+![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600&auto=format&q=80){group="grayscale"}
+
+![Temple gate](https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&auto=format&q=80){group="grayscale"}
+
+![Neon at night](https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=600&auto=format&q=80){group="grayscale"}
+
+![Ramen](https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=600&auto=format&q=80){group="grayscale"}
+
+![Tokyo Tower](https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=600&auto=format&q=80){group="grayscale"}
+
+![Train platform](https://images.unsplash.com/photo-1565618754154-c8011e5df2a6?w=600&auto=format&q=80){group="grayscale"}
+:::
+
 ## Wide Photo
 
 The `.photo-wide` class shows a single image at full content width with a max height of
@@ -200,6 +219,30 @@ The `.photo-wide` class shows a single image at full content width with a max he
 
 ::: {.photo-wide}
 ![Pont Alexandre III at dusk](https://images.unsplash.com/photo-1520939817895-060bdaf4fe1b?w=1200&auto=format&q=80){group="wide" description="Pont Alexandre III at dusk." width="1200" height="800"}
+:::
+
+## Photo Strip
+
+The `.photo-strip` class creates a horizontal scrollable row of images — useful for
+sequences like a walk through a market or a meal course by course. Images display at
+a fixed height with their natural width, and snap into place when scrolling.
+
+::: {.photo-strip}
+![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600&auto=format&q=80){group="strip" description="Shibuya crossing."}
+
+![Temple gate](https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&auto=format&q=80){group="strip" description="Senso-ji temple."}
+
+![Neon at night](https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=600&auto=format&q=80){group="strip" description="Shinjuku neon."}
+
+![Ramen](https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=600&auto=format&q=80){group="strip" description="Tonkotsu ramen."}
+
+![Tokyo Tower](https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=600&auto=format&q=80){group="strip" description="Tokyo Tower."}
+
+![Train platform](https://images.unsplash.com/photo-1565618754154-c8011e5df2a6?w=600&auto=format&q=80){group="strip" description="Yamanote line."}
+
+![Garden path](https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?w=600&auto=format&q=80){group="strip" description="Shinjuku Gyoen."}
+
+![Lanterns](https://images.unsplash.com/photo-1528164344705-47542687000d?w=600&auto=format&q=80){group="strip" description="Paper lanterns."}
 :::
 
 ## Lightbox Groups
@@ -210,6 +253,323 @@ create separate galleries on the same page.
 
 The `description` attribute adds a caption in the lightbox overlay — visible when you
 click any image on this page.
+
+## Figure Layouts
+
+The `layout` attribute arranges multiple images in custom grid patterns — more
+flexible than `.photo-grid` for asymmetric arrangements.
+
+### Two equal images side by side
+
+::: {layout="[1,1]"}
+![Montmartre](https://images.unsplash.com/photo-1550340499-a6c60fc8287c?w=600&auto=format&q=80){group="fig-layout" description="Montmartre streets."}
+
+![Café](https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=600&auto=format&q=80){group="fig-layout" description="Corner café."}
+:::
+
+### Two rows — two images on top, one spanning below
+
+::: {layout="[[1,1],[1]]"}
+![Louvre at night](https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&auto=format&q=80){group="fig-layout" description="The Louvre pyramid."}
+
+![Eiffel Tower](https://images.unsplash.com/photo-1460904577954-8fadb262612c?w=600&auto=format&q=80){group="fig-layout" description="Eiffel Tower from Trocadéro."}
+
+![Seine bookstalls](https://images.unsplash.com/photo-1500039436846-25ae2f11882e?w=1200&auto=format&q=80){group="fig-layout" description="Bouquinistes along the Seine."}
+:::
+
+### Uneven widths — one-third / two-thirds split
+
+::: {layout="[1,2]"}
+![Pastries](https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&auto=format&q=80){group="fig-layout" description="Morning pastries."}
+
+![Rooftops](https://images.unsplash.com/photo-1431274172761-fca41d930114?w=800&auto=format&q=80){group="fig-layout" description="Parisian rooftops."}
+:::
+
+### Hero + two details
+
+`[[2,1],[1,1,1]]` gives one large image beside a smaller one,
+then three equal images below:
+
+::: {layout="[[2,1],[1,1,1]]"}
+![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=800&auto=format&q=80){group="fig-layout" description="Shibuya crossing."}
+
+![Ramen](https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=400&auto=format&q=80){group="fig-layout" description="Tonkotsu ramen."}
+
+![Temple gate](https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&auto=format&q=80){group="fig-layout" description="Senso-ji temple."}
+
+![Neon at night](https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=600&auto=format&q=80){group="fig-layout" description="Shinjuku neon."}
+
+![Tokyo Tower](https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=600&auto=format&q=80){group="fig-layout" description="Tokyo Tower."}
+:::
+
+### One full-width on top, two below
+
+::: {layout="[[1],[1,1]]"}
+![Seine at golden hour](https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1200&auto=format&q=80){group="fig-layout" description="The Seine at golden hour."}
+
+![Montmartre](https://images.unsplash.com/photo-1550340499-a6c60fc8287c?w=600&auto=format&q=80){group="fig-layout" description="Montmartre streets."}
+
+![Café](https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=600&auto=format&q=80){group="fig-layout" description="Corner café."}
+:::
+
+### Three rows with mixed ratios
+
+::: {layout="[[1],[1,2],[2,1]]"}
+![Bridge at dusk](https://images.unsplash.com/photo-1520939817895-060bdaf4fe1b?w=1200&auto=format&q=80){group="fig-layout" description="Pont Alexandre III."}
+
+![Pastries](https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&auto=format&q=80){group="fig-layout" description="Morning pastries."}
+
+![Rooftops](https://images.unsplash.com/photo-1431274172761-fca41d930114?w=800&auto=format&q=80){group="fig-layout" description="Parisian rooftops."}
+
+![Eiffel Tower](https://images.unsplash.com/photo-1460904577954-8fadb262612c?w=800&auto=format&q=80){group="fig-layout" description="Eiffel Tower."}
+
+![Metro entrance](https://images.unsplash.com/photo-1517649763962-0c623066013b?w=400&auto=format&q=80){group="fig-layout" description="Art Nouveau metro."}
+:::
+
+### Asymmetric pair — three-quarters / one-quarter
+
+::: {layout="[3,1]"}
+![Champs-Élysées lights](https://images.unsplash.com/photo-1545622783-b3e021430fee?w=1200&auto=format&q=80){group="fig-layout" description="Champs-Élysées Christmas lights."}
+
+![Lanterns](https://images.unsplash.com/photo-1528164344705-47542687000d?w=400&auto=format&q=80){group="fig-layout" description="Paper lanterns."}
+:::
+
+### Single image, full width
+
+Same as `.photo-wide` but within the layout system:
+
+::: {layout="[1]"}
+![Bamboo path](https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1200&auto=format&q=80){group="fig-layout" description="Bamboo grove path."}
+:::
+
+### Triptych
+
+Three equal images in one row, `[1,1,1]`:
+
+::: {layout="[1,1,1]"}
+![Tea ceremony](https://images.unsplash.com/photo-1563822249366-3efb23b8e0c9?w=600&auto=format&q=80){group="fig-layout" description="Matcha in a tea house."}
+
+![Tsukiji market](https://images.unsplash.com/photo-1553621042-f6e147245754?w=600&auto=format&q=80){group="fig-layout" description="Fresh sushi."}
+
+![Akihabara](https://images.unsplash.com/photo-1480796927426-f609979314bd?w=600&auto=format&q=80){group="fig-layout" description="Akihabara."}
+:::
+
+### Alternating rhythm
+
+`[[1],[1,1],[1],[1,1,1]]` gives solo, pair, solo, trio.
+This is the editorial pacing pattern — vary density to control how the eye moves:
+
+::: {layout="[[1],[1,1],[1],[1,1,1]]"}
+![Garden path](https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?w=1200&auto=format&q=80){group="fig-rhythm" description="Shinjuku Gyoen."}
+
+![Side street](https://images.unsplash.com/photo-1554797589-7241bb691973?w=600&auto=format&q=80){group="fig-rhythm" description="Yanaka side street."}
+
+![Temple detail](https://images.unsplash.com/photo-1504109586057-7a2ae83d1338?w=600&auto=format&q=80){group="fig-rhythm" description="Meiji Shrine incense."}
+
+![Pond reflection](https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=1200&auto=format&q=80){group="fig-rhythm" description="Temple pond reflections."}
+
+![Train platform](https://images.unsplash.com/photo-1565618754154-c8011e5df2a6?w=600&auto=format&q=80){group="fig-rhythm" description="Yamanote line."}
+
+![Sacre-Coeur](https://images.unsplash.com/photo-1583265627959-fb7042f5133b?w=600&auto=format&q=80){group="fig-rhythm" description="Sacre-Coeur steps."}
+
+![Seine bookstalls](https://images.unsplash.com/photo-1500039436846-25ae2f11882e?w=600&auto=format&q=80){group="fig-rhythm" description="Bouquinistes."}
+:::
+
+### Inverted pyramid
+
+`[[1,1,1],[1,1],[1]]` narrows from three to two to one,
+creating a visual funnel:
+
+::: {layout="[[1,1,1],[1,1],[1]]"}
+![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600&auto=format&q=80){group="fig-pyramid" description="Shibuya crossing."}
+
+![Neon at night](https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=600&auto=format&q=80){group="fig-pyramid" description="Shinjuku neon."}
+
+![Ramen](https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=600&auto=format&q=80){group="fig-pyramid" description="Tonkotsu ramen."}
+
+![Louvre at night](https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&auto=format&q=80){group="fig-pyramid" description="The Louvre pyramid."}
+
+![Café](https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=600&auto=format&q=80){group="fig-pyramid" description="Corner café."}
+
+![Bridge at dusk](https://images.unsplash.com/photo-1520939817895-060bdaf4fe1b?w=1200&auto=format&q=80){group="fig-pyramid" description="Pont Alexandre III."}
+:::
+
+### Layout-ncol shorthand
+
+The `layout-ncol` attribute is a simpler alternative to the `layout` attribute for
+equal-column arrangements.
+
+#### 2 columns with layout-ncol
+
+::: {layout-ncol=2}
+![Montmartre](https://images.unsplash.com/photo-1550340499-a6c60fc8287c?w=600&auto=format&q=80){group="ncol"}
+
+![Café](https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=600&auto=format&q=80){group="ncol"}
+:::
+
+#### 3 columns with layout-ncol
+
+::: {layout-ncol=3}
+![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600&auto=format&q=80){group="ncol"}
+
+![Temple gate](https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&auto=format&q=80){group="ncol"}
+
+![Neon at night](https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=600&auto=format&q=80){group="ncol"}
+:::
+
+### Captions and Sub-Captions
+
+Give the parent div a `#fig-` label and each image its own `#fig-` label. The last
+line of text in the div becomes the main caption. Each image's alt text becomes its
+sub-caption. Quarto numbers them automatically (Figure 1 (a), (b), (c), etc.).
+
+::: {#fig-tokyo layout-ncol=3}
+![Shibuya](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600&auto=format&q=80){#fig-shibuya group="figcap"}
+
+![Senso-ji](https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&auto=format&q=80){#fig-sensoji group="figcap"}
+
+![Shinjuku](https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=600&auto=format&q=80){#fig-shinjuku group="figcap"}
+
+Three views of Tokyo
+:::
+
+### Cross-References {#sec-crossref}
+
+Add `#fig-label` to an image to create a numbered figure that can be referenced
+elsewhere in the text with `@fig-label`.
+
+![Cherry blossoms along the Meguro River](https://images.unsplash.com/photo-1522383225653-ed111181a951?w=1200&auto=format&q=80){#fig-meguro group="crossref" description="Peak bloom along the Meguro River canal." width="70%"}
+
+As shown in @fig-meguro, the Meguro River is one of the best spots for cherry
+blossoms in Tokyo. Cross-references automatically generate numbered labels and
+become clickable links.
+
+### Vertical Alignment
+
+The `layout-valign` attribute controls vertical alignment when images in a row
+have different heights. Options are `top`, `center` (default), and `bottom`.
+
+#### Top-aligned (layout-valign="top")
+
+::: {layout="[1,2]" layout-valign="top"}
+![Pastries](https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&auto=format&q=80){group="valign"}
+
+![Rooftops](https://images.unsplash.com/photo-1431274172761-fca41d930114?w=800&auto=format&q=80){group="valign"}
+:::
+
+#### Bottom-aligned (layout-valign="bottom")
+
+::: {layout="[1,2]" layout-valign="bottom"}
+![Pastries](https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&auto=format&q=80){group="valign"}
+
+![Rooftops](https://images.unsplash.com/photo-1431274172761-fca41d930114?w=800&auto=format&q=80){group="valign"}
+:::
+
+## Layout Width Classes
+
+Quarto provides built-in classes to push content beyond the default body width.
+These work without any custom CSS.
+
+### Body Outset
+
+Slightly wider than the body column — good for a photo that deserves a bit more room.
+
+:::{.column-body-outset}
+![Tuileries Garden](https://images.unsplash.com/photo-1524396309943-e03f5249f002?w=1400&auto=format&q=80){group="layout" description="Tuileries Garden — body outset width."}
+:::
+
+### Page Width
+
+Spans the full page width (including margins), wider than body outset.
+
+:::{.column-page}
+![Champs-Élysées lights](https://images.unsplash.com/photo-1545622783-b3e021430fee?w=1600&auto=format&q=80){group="layout" description="Champs-Élysées — page width."}
+:::
+
+### Screen Width
+
+Edge-to-edge, filling the entire browser window.
+
+:::{.column-screen}
+![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=1600&auto=format&q=80){group="layout" description="Shibuya crossing — full screen width."}
+:::
+
+## Columns
+
+:::: {.columns}
+::: {.column width="50%"}
+**Left column** — useful for placing text alongside an image, comparing two photos, or
+breaking up a wall of text. Columns stack vertically on mobile.
+:::
+
+::: {.column width="50%"}
+![Ramen](https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=400&auto=format&q=80){group="cols" description="Tonkotsu ramen."}
+:::
+::::
+
+Uneven split (30/70):
+
+:::: {.columns}
+::: {.column width="30%"}
+**Narrow sidebar.** Good for captions, metadata, or short annotations next to a
+larger block of content.
+:::
+
+::: {.column width="70%"}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+:::
+::::
+
+## Margin Content
+
+### Sidenotes
+
+Quarto footnotes become sidenotes when using `reference-location: margin`
+in the page YAML. On this page, standard footnotes are used instead, so
+here is an explicit margin note placed with the `.column-margin` class.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua.
+
+::: {.column-margin}
+This is a margin note — useful for asides, citations, or supplementary details
+that would interrupt the main text.
+:::
+
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+esse cillam dolore eu fugiat nulla pariatur.
+
+### Margin Figures
+
+Images can also live in the margin:
+
+::: {.column-margin}
+![Café life](https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=400&auto=format&q=80){group="margin" description="A corner café in Paris."}
+:::
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur
+aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur
+sed, convallis at tellus.
+
+### Asides
+
+The `.aside` class places a note in the margin with less markup than `.column-margin`.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua.
+
+[Camera: Fujifilm X-T5, 23mm f/2]{.aside}
+
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+esse cillam dolore eu fugiat nulla pariatur.
 
 ## Typography
 
@@ -243,6 +603,20 @@ headings:
 | `~subscript~` | ~subscript~ |
 | `` `inline code` `` | `inline code` |
 | `[link text](url)` | [link text](https://example.com) |
+
+### Text Wrap Balance
+
+The CSS `text-wrap: balance` property balances line lengths in headings so no
+line is awkwardly shorter than others.
+
+::: {style="max-width: 300px;"}
+[A Long Heading That Will Definitely Wrap Onto Multiple Lines]{style="display: block; font-size: 1.4rem; font-weight: 700; text-wrap: auto; margin-bottom: 1rem;"}
+
+[A Long Heading That Will Definitely Wrap Onto Multiple Lines]{style="display: block; font-size: 1.4rem; font-weight: 700; text-wrap: balance; margin-bottom: 1rem;"}
+:::
+
+The first uses `text-wrap: auto` (default) and the second uses `text-wrap: balance`.
+The balanced version distributes words more evenly across lines.
 
 ## Blockquotes
 
@@ -294,20 +668,6 @@ Right-align numbers, left-align text, center short labels:
 
 :::
 
-### Striped + Hover
-
-::: {.striped .hover}
-
-| Accommodation | City | Nights | Per Night |
-|:--------------|:-----|-------:|----------:|
-| Hôtel des Grands Boulevards | Paris | 4 | €185 |
-| Noku Kyoto | Kyoto | 3 | ¥22,000 |
-| The Millennials Shibuya | Tokyo | 5 | ¥8,500 |
-| Santiago de Alfama | Lisbon | 3 | €145 |
-| Casa Camper | Barcelona | 2 | €195 |
-
-:::
-
 ### Bordered
 
 ::: {.bordered}
@@ -340,7 +700,7 @@ Right-align numbers, left-align text, center short labels:
 
 ### All Styles Combined
 
-::: {.striped .hover .bordered .sm}
+::: {.striped .bordered .sm}
 
 | # | City | Country | Days | Budget/Day | Rating |
 |--:|:-----|:--------|-----:|-----------:|:------:|
@@ -352,6 +712,37 @@ Right-align numbers, left-align text, center short labels:
 | 6 | Seoul | South Korea | 6 | $90 | ★★★★ |
 
 :::
+
+## Lists
+
+Unordered:
+
+- Lorem ipsum dolor sit amet
+- Consectetur adipiscing elit
+- Sed do eiusmod tempor
+  - Incididunt ut labore
+  - Et dolore magna aliqua
+
+Ordered:
+
+1. Lorem ipsum dolor sit amet
+2. Consectetur adipiscing elit
+3. Sed do eiusmod tempor incididunt
+4. Ut labore et dolore magna aliqua
+
+Definition list:
+
+Hanami
+: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+  incididunt ut labore et dolore magna aliqua.
+
+Bouquinistes
+: Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur
+  aliquet quam id dui posuere blandit.
+
+Konbini
+: Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Nulla
+  porttitor accumsan tincidunt.
 
 ## Code Blocks
 
@@ -404,34 +795,6 @@ Cras ultricies ligula sed magna dictum porta. Mauris blandit aliquet elit, eget 
 Click to expand. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 :::
 
-## Columns
-
-:::: {.columns}
-::: {.column width="50%"}
-**Left column** — useful for placing text alongside an image, comparing two photos, or
-breaking up a wall of text. Columns stack vertically on mobile.
-:::
-
-::: {.column width="50%"}
-![Ramen](https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=400&auto=format&q=80){group="cols" description="Tonkotsu ramen."}
-:::
-::::
-
-Uneven split (30/70):
-
-:::: {.columns}
-::: {.column width="30%"}
-**Narrow sidebar.** Good for captions, metadata, or short annotations next to a
-larger block of content.
-:::
-
-::: {.column width="70%"}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-:::
-::::
-
 ## Tabsets
 
 ::: {.panel-tabset}
@@ -451,37 +814,6 @@ Cras ultricies ligula sed magna dictum porta. Mauris blandit aliquet elit, eget
 tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada.
 :::
 
-## Lists
-
-Unordered:
-
-- Lorem ipsum dolor sit amet
-- Consectetur adipiscing elit
-- Sed do eiusmod tempor
-  - Incididunt ut labore
-  - Et dolore magna aliqua
-
-Ordered:
-
-1. Lorem ipsum dolor sit amet
-2. Consectetur adipiscing elit
-3. Sed do eiusmod tempor incididunt
-4. Ut labore et dolore magna aliqua
-
-Definition list:
-
-Hanami
-: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-  incididunt ut labore et dolore magna aliqua.
-
-Bouquinistes
-: Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur
-  aliquet quam id dui posuere blandit.
-
-Konbini
-: Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Nulla
-  porttitor accumsan tincidunt.
-
 ## Footnotes
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit[^1]. Sed do eiusmod tempor
@@ -491,42 +823,6 @@ incididunt ut labore et dolore magna aliqua[^2].
 
 [^2]: Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia
       eget consectetur sed.
-
-## Margin Content
-
-### Sidenotes
-
-Quarto footnotes become sidenotes when using `reference-location: margin`
-in the page YAML. On this page, standard footnotes are used instead, so
-here is an explicit margin note placed with the `.column-margin` class.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua.
-
-::: {.column-margin}
-This is a margin note — useful for asides, citations, or supplementary details
-that would interrupt the main text.
-:::
-
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-esse cillam dolore eu fugiat nulla pariatur.
-
-### Margin Figures
-
-Images can also live in the margin:
-
-::: {.column-margin}
-![Café life](https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=400&auto=format&q=80){group="margin" description="A corner café in Paris."}
-:::
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur
-aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur
-sed, convallis at tellus.
 
 ## Horizontal Rule
 
@@ -550,311 +846,38 @@ $$
 
 where $N$ is the f-number and $t$ is exposure time in seconds.
 
-## Layout Width Classes
-
-Quarto provides built-in classes to push content beyond the default body width.
-These work without any custom CSS.
-
-### Body Outset
-
-Slightly wider than the body column — good for a photo that deserves a bit more room.
-
-:::{.column-body-outset}
-![Tuileries Garden](https://images.unsplash.com/photo-1524396309943-e03f5249f002?w=1400&auto=format&q=80){group="layout" description="Tuileries Garden — body outset width."}
-:::
-
-### Page Width
-
-Spans the full page width (including margins), wider than body outset.
-
-:::{.column-page}
-![Champs-Élysées lights](https://images.unsplash.com/photo-1545622783-b3e021430fee?w=1600&auto=format&q=80){group="layout" description="Champs-Élysées — page width."}
-:::
-
-### Screen Width
-
-Edge-to-edge, filling the entire browser window.
-
-:::{.column-screen}
-![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=1600&auto=format&q=80){group="layout" description="Shibuya crossing — full screen width."}
-:::
-
-## Figure Layouts
-
-The `layout` attribute arranges multiple images in custom grid patterns — more
-flexible than `.photo-grid` for asymmetric arrangements.
-
-Two equal images side by side:
-
-::: {layout="[1,1]"}
-![Montmartre](https://images.unsplash.com/photo-1550340499-a6c60fc8287c?w=600&auto=format&q=80){group="fig-layout" description="Montmartre streets."}
-
-![Café](https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=600&auto=format&q=80){group="fig-layout" description="Corner café."}
-:::
-
-Two rows — two images on top, one spanning below:
-
-::: {layout="[[1,1],[1]]"}
-![Louvre at night](https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&auto=format&q=80){group="fig-layout" description="The Louvre pyramid."}
-
-![Eiffel Tower](https://images.unsplash.com/photo-1460904577954-8fadb262612c?w=600&auto=format&q=80){group="fig-layout" description="Eiffel Tower from Trocadéro."}
-
-![Seine bookstalls](https://images.unsplash.com/photo-1500039436846-25ae2f11882e?w=1200&auto=format&q=80){group="fig-layout" description="Bouquinistes along the Seine."}
-:::
-
-Uneven widths — one-third / two-thirds split:
-
-::: {layout="[1,2]"}
-![Pastries](https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&auto=format&q=80){group="fig-layout" description="Morning pastries."}
-
-![Rooftops](https://images.unsplash.com/photo-1431274172761-fca41d930114?w=800&auto=format&q=80){group="fig-layout" description="Parisian rooftops."}
-:::
-
-Hero + two details — `[[2,1],[1,1,1]]` gives one large image beside a smaller one,
-then three equal images below:
-
-::: {layout="[[2,1],[1,1,1]]"}
-![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=800&auto=format&q=80){group="fig-layout" description="Shibuya crossing."}
-
-![Ramen](https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=400&auto=format&q=80){group="fig-layout" description="Tonkotsu ramen."}
-
-![Temple gate](https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&auto=format&q=80){group="fig-layout" description="Senso-ji temple."}
-
-![Neon at night](https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=600&auto=format&q=80){group="fig-layout" description="Shinjuku neon."}
-
-![Tokyo Tower](https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=600&auto=format&q=80){group="fig-layout" description="Tokyo Tower."}
-:::
-
-One full-width on top, two below — `[[1],[1,1]]`:
-
-::: {layout="[[1],[1,1]]"}
-![Seine at golden hour](https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1200&auto=format&q=80){group="fig-layout" description="The Seine at golden hour."}
-
-![Montmartre](https://images.unsplash.com/photo-1550340499-a6c60fc8287c?w=600&auto=format&q=80){group="fig-layout" description="Montmartre streets."}
-
-![Café](https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=600&auto=format&q=80){group="fig-layout" description="Corner café."}
-:::
-
-Three rows with mixed ratios — `[[1],[1,2],[2,1]]`:
-
-::: {layout="[[1],[1,2],[2,1]]"}
-![Bridge at dusk](https://images.unsplash.com/photo-1520939817895-060bdaf4fe1b?w=1200&auto=format&q=80){group="fig-layout" description="Pont Alexandre III."}
-
-![Pastries](https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&auto=format&q=80){group="fig-layout" description="Morning pastries."}
-
-![Rooftops](https://images.unsplash.com/photo-1431274172761-fca41d930114?w=800&auto=format&q=80){group="fig-layout" description="Parisian rooftops."}
-
-![Eiffel Tower](https://images.unsplash.com/photo-1460904577954-8fadb262612c?w=800&auto=format&q=80){group="fig-layout" description="Eiffel Tower."}
-
-![Metro entrance](https://images.unsplash.com/photo-1517649763962-0c623066013b?w=400&auto=format&q=80){group="fig-layout" description="Art Nouveau metro."}
-:::
-
-Asymmetric pair — `[3,1]` (three-quarters / one-quarter):
-
-::: {layout="[3,1]"}
-![Champs-Élysées lights](https://images.unsplash.com/photo-1545622783-b3e021430fee?w=1200&auto=format&q=80){group="fig-layout" description="Champs-Élysées Christmas lights."}
-
-![Lanterns](https://images.unsplash.com/photo-1528164344705-47542687000d?w=400&auto=format&q=80){group="fig-layout" description="Paper lanterns."}
-:::
-
-Single image, full width — `[1]` (same as `.photo-wide` but within the layout system):
-
-::: {layout="[1]"}
-![Bamboo path](https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1200&auto=format&q=80){group="fig-layout" description="Bamboo grove path."}
-:::
-
-Triptych — three equal images in one row, `[1,1,1]`:
-
-::: {layout="[1,1,1]"}
-![Tea ceremony](https://images.unsplash.com/photo-1563822249366-3efb23b8e0c9?w=600&auto=format&q=80){group="fig-layout" description="Matcha in a tea house."}
-
-![Tsukiji market](https://images.unsplash.com/photo-1553621042-f6e147245754?w=600&auto=format&q=80){group="fig-layout" description="Fresh sushi."}
-
-![Akihabara](https://images.unsplash.com/photo-1480796927426-f609979314bd?w=600&auto=format&q=80){group="fig-layout" description="Akihabara."}
-:::
-
-Alternating rhythm — `[[1],[1,1],[1],[1,1,1]]` gives solo, pair, solo, trio.
-This is the editorial pacing pattern — vary density to control how the eye moves:
-
-::: {layout="[[1],[1,1],[1],[1,1,1]]"}
-![Garden path](https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?w=1200&auto=format&q=80){group="fig-rhythm" description="Shinjuku Gyoen."}
-
-![Side street](https://images.unsplash.com/photo-1554797589-7241bb691973?w=600&auto=format&q=80){group="fig-rhythm" description="Yanaka side street."}
-
-![Temple detail](https://images.unsplash.com/photo-1504109586057-7a2ae83d1338?w=600&auto=format&q=80){group="fig-rhythm" description="Meiji Shrine incense."}
-
-![Pond reflection](https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=1200&auto=format&q=80){group="fig-rhythm" description="Temple pond reflections."}
-
-![Train platform](https://images.unsplash.com/photo-1565618754154-c8011e5df2a6?w=600&auto=format&q=80){group="fig-rhythm" description="Yamanote line."}
-
-![Sacre-Coeur](https://images.unsplash.com/photo-1583265627959-fb7042f5133b?w=600&auto=format&q=80){group="fig-rhythm" description="Sacre-Coeur steps."}
-
-![Seine bookstalls](https://images.unsplash.com/photo-1500039436846-25ae2f11882e?w=600&auto=format&q=80){group="fig-rhythm" description="Bouquinistes."}
-:::
-
-Inverted pyramid — `[[1,1,1],[1,1],[1]]` narrows from three to two to one,
-creating a visual funnel:
-
-::: {layout="[[1,1,1],[1,1],[1]]"}
-![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600&auto=format&q=80){group="fig-pyramid" description="Shibuya crossing."}
-
-![Neon at night](https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=600&auto=format&q=80){group="fig-pyramid" description="Shinjuku neon."}
-
-![Ramen](https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=600&auto=format&q=80){group="fig-pyramid" description="Tonkotsu ramen."}
-
-![Louvre at night](https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&auto=format&q=80){group="fig-pyramid" description="The Louvre pyramid."}
-
-![Café](https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=600&auto=format&q=80){group="fig-pyramid" description="Corner café."}
-
-![Bridge at dusk](https://images.unsplash.com/photo-1520939817895-060bdaf4fe1b?w=1200&auto=format&q=80){group="fig-pyramid" description="Pont Alexandre III."}
-:::
-
-## Photo Strip
-
-The `.photo-strip` class creates a horizontal scrollable row of images — useful for
-sequences like a walk through a market or a meal course by course. Images display at
-a fixed height with their natural width, and snap into place when scrolling.
-
-::: {.photo-strip}
-![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600&auto=format&q=80){group="strip" description="Shibuya crossing."}
-
-![Temple gate](https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&auto=format&q=80){group="strip" description="Senso-ji temple."}
-
-![Neon at night](https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=600&auto=format&q=80){group="strip" description="Shinjuku neon."}
-
-![Ramen](https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=600&auto=format&q=80){group="strip" description="Tonkotsu ramen."}
-
-![Tokyo Tower](https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=600&auto=format&q=80){group="strip" description="Tokyo Tower."}
-
-![Train platform](https://images.unsplash.com/photo-1565618754154-c8011e5df2a6?w=600&auto=format&q=80){group="strip" description="Yamanote line."}
-
-![Garden path](https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?w=600&auto=format&q=80){group="strip" description="Shinjuku Gyoen."}
-
-![Lanterns](https://images.unsplash.com/photo-1528164344705-47542687000d?w=600&auto=format&q=80){group="strip" description="Paper lanterns."}
-:::
-
-## Video Embeds
-
-The `{{</* video */>}}` shortcode embeds YouTube or Vimeo clips inline.
-
-{{< video https://www.youtube.com/embed/dQw4w9WgXcQ width="100%" height="400" >}}
-
-## Asides
-
-The `.aside` class places a note in the margin with less markup than `.column-margin`.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua.
-
-[Camera: Fujifilm X-T5, 23mm f/2]{.aside}
-
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-esse cillam dolore eu fugiat nulla pariatur.
-
-## Grayscale-to-Color Hover
-
-The `.photo-grid.grayscale` modifier starts images in black & white. Hovering reveals
-full color with a smooth transition.
-
-::: {.photo-grid .cols-3 .grayscale}
-![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600&auto=format&q=80){group="grayscale"}
-
-![Temple gate](https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&auto=format&q=80){group="grayscale"}
-
-![Neon at night](https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=600&auto=format&q=80){group="grayscale"}
-
-![Ramen](https://images.unsplash.com/photo-1557872943-16a5ac26437e?w=600&auto=format&q=80){group="grayscale"}
-
-![Tokyo Tower](https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=600&auto=format&q=80){group="grayscale"}
-
-![Train platform](https://images.unsplash.com/photo-1565618754154-c8011e5df2a6?w=600&auto=format&q=80){group="grayscale"}
-:::
-
-## Layout Ncol Shorthand
-
-The `layout-ncol` attribute is a simpler alternative to the `layout` attribute for
-equal-column arrangements.
-
-### 2 columns with layout-ncol
-
-::: {layout-ncol=2}
-![Montmartre](https://images.unsplash.com/photo-1550340499-a6c60fc8287c?w=600&auto=format&q=80){group="ncol"}
-
-![Café](https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=600&auto=format&q=80){group="ncol"}
-:::
-
-### 3 columns with layout-ncol
-
-::: {layout-ncol=3}
-![Shibuya crossing](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600&auto=format&q=80){group="ncol"}
-
-![Temple gate](https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&auto=format&q=80){group="ncol"}
-
-![Neon at night](https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=600&auto=format&q=80){group="ncol"}
-:::
-
-## Figure Captions and Sub-Captions
-
-Give the parent div a `#fig-` label and each image its own `#fig-` label. The last
-line of text in the div becomes the main caption. Each image's alt text becomes its
-sub-caption. Quarto numbers them automatically (Figure 1 (a), (b), (c), etc.).
-
-::: {#fig-tokyo layout-ncol=3}
-![Shibuya](https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600&auto=format&q=80){#fig-shibuya group="figcap"}
-
-![Senso-ji](https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&auto=format&q=80){#fig-sensoji group="figcap"}
-
-![Shinjuku](https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=600&auto=format&q=80){#fig-shinjuku group="figcap"}
-
-Three views of Tokyo
-:::
-
-## Cross-References {#sec-crossref}
-
-Add `#fig-label` to an image to create a numbered figure that can be referenced
-elsewhere in the text with `@fig-label`.
-
-![Cherry blossoms along the Meguro River](https://images.unsplash.com/photo-1522383225653-ed111181a951?w=1200&auto=format&q=80){#fig-meguro group="crossref" description="Peak bloom along the Meguro River canal." width="70%"}
-
-As shown in @fig-meguro, the Meguro River is one of the best spots for cherry
-blossoms in Tokyo. Cross-references automatically generate numbered labels and
-become clickable links.
-
-## Layout Vertical Alignment
-
-The `layout-valign` attribute controls vertical alignment when images in a row
-have different heights. Options are `top`, `center` (default), and `bottom`.
-
-### Top-aligned (layout-valign="top")
-
-::: {layout="[1,2]" layout-valign="top"}
-![Pastries](https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&auto=format&q=80){group="valign"}
-
-![Rooftops](https://images.unsplash.com/photo-1431274172761-fca41d930114?w=800&auto=format&q=80){group="valign"}
-:::
-
-### Bottom-aligned (layout-valign="bottom")
-
-::: {layout="[1,2]" layout-valign="bottom"}
-![Pastries](https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&auto=format&q=80){group="valign"}
-
-![Rooftops](https://images.unsplash.com/photo-1431274172761-fca41d930114?w=800&auto=format&q=80){group="valign"}
-:::
-
-## Text Wrap Balance
-
-The CSS `text-wrap: balance` property balances line lengths in headings so no
-line is awkwardly shorter than others.
-
-::: {style="max-width: 300px;"}
-[A Long Heading That Will Definitely Wrap Onto Multiple Lines]{style="display: block; font-size: 1.4rem; font-weight: 700; text-wrap: auto; margin-bottom: 1rem;"}
-
-[A Long Heading That Will Definitely Wrap Onto Multiple Lines]{style="display: block; font-size: 1.4rem; font-weight: 700; text-wrap: balance; margin-bottom: 1rem;"}
-:::
-
-The first uses `text-wrap: auto` (default) and the second uses `text-wrap: balance`.
-The balanced version distributes words more evenly across lines.
+## Diagrams
+
+Quarto renders Mermaid and Graphviz diagrams inline. Useful for trip planning,
+route maps, or timelines.
+
+### Mermaid
+
+```{mermaid}
+%%| fig-width: 5
+%%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#faeee8', 'primaryBorderColor': '#c4653a', 'primaryTextColor': '#3a2a1f', 'lineColor': '#c4653a', 'edgeLabelBackground': '#faf8f5', 'fontFamily': 'IBM Plex Sans'}}}%%
+graph LR
+    A[Tokyo] -->|Shinkansen| B[Kyoto]
+    B -->|Bus| C[Nara]
+    C -->|Train| B
+    B -->|Shinkansen| D[Osaka]
+```
+
+### Graphviz
+
+```{dot}
+//| fig-cap: "Tokyo itinerary"
+//| label: fig-graphviz
+digraph {
+    rankdir=LR
+    node [shape=box style=rounded fontname="IBM Plex Sans"]
+    "Day 1-3" -> "Asakusa & Ueno"
+    "Day 4-5" -> "Shibuya & Harajuku"
+    "Day 6-7" -> "Day trips"
+    "Day trips" -> "Kamakura"
+    "Day trips" -> "Nikko"
+}
+```
 
 ## Bootstrap Carousel
 
@@ -904,39 +927,6 @@ auto-advances and includes prev/next controls.
 </div>
 ```
 
-## Diagrams
-
-Quarto renders Mermaid and Graphviz diagrams inline. Useful for trip planning,
-route maps, or timelines.
-
-### Mermaid
-
-```{mermaid}
-%%| fig-width: 5
-%%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#faeee8', 'primaryBorderColor': '#c4653a', 'primaryTextColor': '#3a2a1f', 'lineColor': '#c4653a', 'edgeLabelBackground': '#faf8f5', 'fontFamily': 'IBM Plex Sans'}}}%%
-graph LR
-    A[Tokyo] -->|Shinkansen| B[Kyoto]
-    B -->|Bus| C[Nara]
-    C -->|Train| B
-    B -->|Shinkansen| D[Osaka]
-```
-
-### Graphviz
-
-```{dot}
-//| fig-cap: "Tokyo itinerary"
-//| label: fig-graphviz
-digraph {
-    rankdir=LR
-    node [shape=box style=rounded fontname="IBM Plex Sans"]
-    "Day 1-3" -> "Asakusa & Ueno"
-    "Day 4-5" -> "Shibuya & Harajuku"
-    "Day 6-7" -> "Day trips"
-    "Day trips" -> "Kamakura"
-    "Day trips" -> "Nikko"
-}
-```
-
 ## Grayscale Click Toggle
 
 Wrap an image in `.grayscale-toggle` to start it in black & white. Clicking toggles
@@ -966,6 +956,12 @@ versions.
   <img slot="second" src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1000&auto=format&q=80" alt="After — full color" />
 </img-comparison-slider>
 ```
+
+## Video Embeds
+
+The `{{</* video */>}}` shortcode embeds YouTube or Vimeo clips inline.
+
+{{< video https://www.youtube.com/embed/dQw4w9WgXcQ width="100%" height="400" >}}
 
 ## Trip Map
 
