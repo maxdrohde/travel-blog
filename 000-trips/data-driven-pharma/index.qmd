@@ -5,10 +5,6 @@ description: "A quick conference trip to South San Francisco."
 image: IMG_9542.jpg
 ---
 
-```{=html}
-<div class="trip-map" data-lat="37.6724" data-lng="-122.384" data-zoom="12" data-label="South San Francisco"></div>
-```
-
 A few snapshots from the conference venue area.
 
 ## Photos
@@ -21,6 +17,27 @@ A few snapshots from the conference venue area.
 ![](IMG_9545.jpg){group="ddp" description="SSF streets."}
 :::
 
-## Where these were taken
+## Maps
+
+::: {.panel-tabset}
+
+### Location
+
+```{=html}
+<div class="trip-map" data-lat="37.6724" data-lng="-122.384" data-zoom="12" data-label="South San Francisco"></div>
+```
+
+### Photo Map
 
 {{< include ../../_includes/photo-map.qmd >}}
+
+:::
+
+```{=html}
+<script>
+// Leaflet maps need a resize when revealed in a hidden tab
+document.addEventListener("shown.bs.tab", function() {
+  window.dispatchEvent(new Event("resize"));
+});
+</script>
+```
