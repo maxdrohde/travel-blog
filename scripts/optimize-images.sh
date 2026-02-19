@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-PHOTOS_DIR="_photos"
+PHOTOS_DIR="original-photos"
 TRIPS_DIR="trips"
 MAX_WIDTH=1600
 QUALITY=80
 
-# Nothing to do if _photos/ doesn't exist or is empty
+# Nothing to do if original-photos/ doesn't exist or is empty
 if [ ! -d "$PHOTOS_DIR" ]; then
     exit 0
 fi
@@ -34,10 +34,54 @@ fi
 processed=0
 skipped=0
 
+# --- Extract GPS coordinates from raw photos (before stripping metadata) ---
+extract_gps=false
+if command -v exiftool &>/dev/null; then
+    extract_gps=true
+fi
+
 for trip_dir in "$PHOTOS_DIR"/*/; do
     slug="$(basename "$trip_dir")"
     out_dir="$TRIPS_DIR/$slug"
     mkdir -p "$out_dir"
+
+    # Extract GPS data to JSON for map display
+    if [ "$extract_gps" = true ]; then
+        json_file="$out_dir/photo-locations.json"
+        exiftool -json -n -GPSLatitude -GPSLongitude -DateTimeOriginal -FileName \
+            -ext jpg -ext jpeg -ext png -ext tiff -ext heic \
+            "$trip_dir" 2>/dev/null | \
+        python3 -c "
+import json, sys, os
+try:
+    data = json.load(sys.stdin)
+    seen = set()
+    locs = []
+    for d in sorted(data, key=lambda x: x.get('DateTimeOriginal', '')):
+        lat = d.get('GPSLatitude')
+        lon = d.get('GPSLongitude')
+        if lat is None or lon is None:
+            continue
+        out_name = os.path.splitext(d['FileName'])[0] + '.jpg'
+        if out_name in seen:
+            continue
+        seen.add(out_name)
+        dt = d.get('DateTimeOriginal', '')
+        locs.append({'file': out_name, 'lat': lat, 'lon': lon, 'date': dt})
+    if locs:
+        json.dump(locs, sys.stdout, indent=2)
+        sys.stdout.write('\n')
+except Exception:
+    pass
+" > "$json_file.tmp" 2>/dev/null
+
+        if [ -s "$json_file.tmp" ]; then
+            mv "$json_file.tmp" "$json_file"
+            echo "GPS data: $slug ($(python3 -c "import json; print(len(json.load(open('$json_file'))))" 2>/dev/null || echo '?') locations)"
+        else
+            rm -f "$json_file.tmp"
+        fi
+    fi
 
     for src in "$trip_dir"*.{jpg,jpeg,png,tiff,heic,JPG,JPEG,PNG,TIFF,HEIC}; do
         [ -f "$src" ] || continue

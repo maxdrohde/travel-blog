@@ -2,7 +2,7 @@
 let currentYear = null;
 for (const item of items) {
     const date = new Date(item.date);
-    const year = date.getUTCFullYear();
+    const year = isNaN(date.getTime()) ? "Undated" : date.getUTCFullYear();
 
     if (year !== currentYear) {
         if (currentYear !== null) {

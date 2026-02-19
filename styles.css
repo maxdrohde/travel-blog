@@ -112,11 +112,6 @@
     margin: 0;
 }
 
-.photo-strip + p:empty + .photo-strip-hint,
-.photo-strip ~ .photo-strip-hint {
-    text-align: center;
-}
-
 /* Scroll hint — sticky arrows at right edge of strip */
 .photo-strip::after {
     content: "❯\A❯\A❯";
@@ -133,6 +128,27 @@
     color: #bbb;
     opacity: 0.7;
     background: var(--bs-body-bg, #faf8f5);
+}
+
+/* Grayscale-to-color hover effect */
+.photo-grid.grayscale img {
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+}
+
+.photo-grid.grayscale img:hover {
+    filter: grayscale(0%);
+}
+
+/* Click-to-toggle grayscale */
+.grayscale-toggle img {
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+    cursor: pointer;
+}
+
+.grayscale-toggle.is-color img {
+    filter: grayscale(0%);
 }
 
 /* Listing cards — clean, minimal */
@@ -204,13 +220,15 @@ div.quarto-post .metadata {
 }
 
 .quarto-title-meta {
+    margin-top: 1rem;
     font-size: 0.85rem;
     color: #999;
     font-family: "IBM Plex Mono", monospace;
 }
 
-/* Hide "Published" label, show only the date */
-.quarto-title-meta-heading {
+/* Hide "Published" label and description subtitle */
+.quarto-title-meta-heading,
+#title-block-header .description {
     display: none;
 }
 
@@ -301,4 +319,76 @@ body.quarto-dark .quarto-listing .card {
 
 body.quarto-dark .quarto-listing .card:hover {
     box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+}
+
+/* Trip location map — minimal country/region context */
+.trip-map {
+    height: 180px;
+    width: 100%;
+    border-radius: 3px;
+    margin: 0 0 1.5rem 0;
+    border: 1px solid #e0e0e0;
+}
+
+.trip-map-label.leaflet-tooltip {
+    background: rgba(255, 255, 255, 0.85);
+    border: none;
+    box-shadow: none;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.75rem;
+    color: #555;
+    padding: 2px 6px;
+    border-radius: 2px;
+}
+
+.trip-map-label.leaflet-tooltip::before {
+    display: none;
+}
+
+body.quarto-dark .trip-map {
+    border-color: #333;
+}
+
+body.quarto-dark .trip-map-label.leaflet-tooltip {
+    background: rgba(30, 30, 30, 0.85);
+    color: #bbb;
+}
+
+/* Photo map popup — image only, no bubble */
+.photo-popup.leaflet-popup .leaflet-popup-content-wrapper {
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+}
+
+.photo-popup.leaflet-popup .leaflet-popup-content {
+    margin: 0;
+}
+
+.photo-popup .leaflet-popup-tip-container {
+    display: none;
+}
+
+/* Route arrow markers + count badges — no default leaflet icon styling */
+.route-arrow,
+.photo-count-badge {
+    background: none !important;
+    border: none !important;
+}
+
+/* Image comparison slider */
+img-comparison-slider {
+    width: 100%;
+    border-radius: 3px;
+    margin: 1rem 0;
+    --divider-width: 2px;
+    --divider-color: #c4653a;
+    --default-handle-color: #c4653a;
+    --default-handle-width: 40px;
+}
+
+body.quarto-dark img-comparison-slider {
+    --divider-color: #d4845a;
+    --default-handle-color: #d4845a;
 }

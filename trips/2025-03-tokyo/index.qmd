@@ -5,6 +5,10 @@ description: "Temples, ramen, and sakura — two weeks in Tokyo during peak bloo
 image: https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&auto=format&q=80
 ---
 
+```{=html}
+<div class="trip-map" data-lat="35.6762" data-lng="139.6503" data-zoom="5" data-label="Tokyo, Japan"></div>
+```
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillam dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
 
 Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Nulla porttitor accumsan tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.

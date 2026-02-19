@@ -1,0 +1,196 @@
+```{ojs}
+//| echo: false
+L = require("leaflet@1.9.4")
+```
+
+```{ojs}
+//| echo: false
+photoLocations = {
+  try {
+    const resp = await fetch("photo-locations.json");
+    if (!resp.ok) return [];
+    return await resp.json();
+  } catch(e) {
+    return [];
+  }
+}
+```
+
+```{ojs}
+//| echo: false
+photoMap = {
+  if (photoLocations.length === 0) return html``;
+
+  const LIGHT_URL = "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png";
+  const DARK_URL = "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png";
+  const TILE_OPTS = {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
+    subdomains: "abcd",
+    maxZoom: 19
+  };
+  const isDark = () => document.body.classList.contains("quarto-dark");
+  const accentColor = () => isDark() ? "#d4845a" : "#c4653a";
+  const timestampColor = () => isDark() ? "#bbb" : "#999";
+
+  const container = html`<div style="margin: 2rem 0;">
+    <div style="height: 600px; width: 100%; border-radius: 3px;"></div>
+  </div>`;
+
+  yield container;
+
+  const mapDiv = container.querySelector("div > div");
+  const map = L.map(mapDiv, { scrollWheelZoom: false, attributionControl: false });
+
+  let tileLayer = L.tileLayer(isDark() ? DARK_URL : LIGHT_URL, TILE_OPTS).addTo(map);
+
+  function formatDate(exifDate) {
+    const [date, time] = exifDate.split(" ");
+    const [y, m, d] = date.split(":");
+    const [h, min] = time.split(":");
+    const dt = new Date(+y, +m - 1, +d, +h, +min);
+    const month = dt.toLocaleString("en-US", { month: "short" });
+    const hour = dt.getHours() % 12 || 12;
+    const ampm = dt.getHours() < 12 ? "AM" : "PM";
+    return `${month} ${+d}, ${y} · ${hour}:${min} ${ampm}`;
+  }
+
+  function photoPopupHtml(photos, groupId) {
+    if (photos.length === 1) {
+      const loc = photos[0];
+      return `<a href="${loc.file}" class="glightbox" data-gallery="map-${groupId}" data-description="${loc.date ? formatDate(loc.date) : ''}" style="cursor: pointer;">` +
+        `<img src="${loc.file}" style="max-width: 200px; border-radius: 4px; display: block;">` +
+        `</a>` +
+        (loc.date ? `<div style="font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; color: ${timestampColor()}; text-align: center; margin-top: 4px;">${formatDate(loc.date)}</div>` : "");
+    }
+    const items = photos.map(loc =>
+      `<div style="flex-shrink: 0;">` +
+      `<a href="${loc.file}" class="glightbox" data-gallery="map-${groupId}" data-description="${loc.date ? formatDate(loc.date) : ''}" style="cursor: pointer;">` +
+      `<img src="${loc.file}" style="width: 200px; border-radius: 4px; display: block;">` +
+      `</a>` +
+      (loc.date ? `<div style="font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; color: ${timestampColor()}; text-align: center; margin-top: 4px;">${formatDate(loc.date)}</div>` : "") +
+      `</div>`
+    ).join("");
+    return `<div style="display: flex; gap: 8px; overflow-x: auto; scroll-snap-type: x mandatory;">${items}</div>`;
+  }
+
+  // Group photos by location (round to ~10m precision to catch near-duplicates)
+  const grouped = new Map();
+  for (const loc of photoLocations) {
+    const key = `${loc.lat.toFixed(4)},${loc.lon.toFixed(4)}`;
+    if (!grouped.has(key)) grouped.set(key, { lat: loc.lat, lon: loc.lon, photos: [] });
+    grouped.get(key).photos.push(loc);
+  }
+
+  const markers = [];
+  let groupIdx = 0;
+  for (const [, g] of grouped) {
+    const count = g.photos.length;
+    const gid = groupIdx++;
+    const marker = L.circleMarker([g.lat, g.lon], {
+      radius: count > 1 ? 8 : 6,
+      fillColor: accentColor(),
+      color: "#fff",
+      weight: 2,
+      fillOpacity: 0.9
+    }).addTo(map);
+
+    const popupContent = photoPopupHtml(g.photos, gid);
+    const popupMaxWidth = count > 1 ? 420 : 210;
+
+    marker.bindPopup(popupContent, {
+      minWidth: 50, maxWidth: popupMaxWidth, closeButton: false, className: "photo-popup"
+    });
+
+    // Initialize GLightbox on popup links after popup opens
+    marker.on("popupopen", () => {
+      if (typeof GLightbox !== "undefined") {
+        GLightbox({ selector: `.glightbox[data-gallery="map-${gid}"]` });
+      }
+    });
+
+    // Show count badge for grouped markers
+    if (count > 1) {
+      const badge = L.divIcon({
+        html: `<div style="font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem; color: #fff; background: ${accentColor()}; border-radius: 50%; width: 16px; height: 16px; display: flex; align-items: center; justify-content: center; font-weight: 700;">${count}</div>`,
+        iconSize: [16, 16],
+        iconAnchor: [8, 8],
+        className: "photo-count-badge"
+      });
+      const badgeMarker = L.marker([g.lat, g.lon], { icon: badge, interactive: false }).addTo(map);
+      badgeMarker._badgeCount = count;
+      markers.push(badgeMarker);
+    }
+
+    markers.push(marker);
+  }
+
+  const group = L.featureGroup(markers);
+  map.fitBounds(group.getBounds().pad(0.3));
+
+  // Route line + arrows between unique locations
+  const uniqueCoords = [...grouped.values()].map(g => [g.lat, g.lon]);
+
+  // SVG arrow at midpoint of each segment (skip if too close on screen)
+  function addArrows(coords, color) {
+    const arrows = [];
+    for (let i = 0; i < coords.length - 1; i++) {
+      const from = map.latLngToLayerPoint(L.latLng(coords[i]));
+      const to = map.latLngToLayerPoint(L.latLng(coords[i + 1]));
+      const dx = to.x - from.x, dy = to.y - from.y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < 40) continue;
+      const mid = L.point((from.x + to.x) / 2, (from.y + to.y) / 2);
+      const angle = Math.atan2(dy, dx) * 180 / Math.PI;
+      const midLatLng = map.layerPointToLatLng(mid);
+      const icon = L.divIcon({
+        html: `<svg width="18" height="18" viewBox="0 0 18 18" style="transform: rotate(${angle}deg);">
+          <path d="M 1 3 L 13 9 L 1 15 Z" fill="${color}" opacity="0.7"/>
+        </svg>`,
+        iconSize: [18, 18],
+        iconAnchor: [9, 9],
+        className: "route-arrow"
+      });
+      arrows.push(L.marker(midLatLng, { icon, interactive: false }).addTo(map));
+    }
+    return arrows;
+  }
+
+  let routeLine = null;
+  let arrows = [];
+  if (uniqueCoords.length > 1) {
+    routeLine = L.polyline(uniqueCoords, {
+      color: accentColor(),
+      weight: 2,
+      opacity: 0.4,
+      dashArray: "6 4"
+    }).addTo(map);
+    arrows = addArrows(uniqueCoords, accentColor());
+  }
+
+  map.on("zoomend moveend", () => {
+    if (uniqueCoords.length < 2) return;
+    arrows.forEach(a => map.removeLayer(a));
+    arrows = addArrows(uniqueCoords, accentColor());
+  });
+
+  let wasDark = isDark();
+  new MutationObserver(() => {
+    const dark = isDark();
+    if (dark === wasDark) return;
+    wasDark = dark;
+    map.removeLayer(tileLayer);
+    tileLayer = L.tileLayer(dark ? DARK_URL : LIGHT_URL, TILE_OPTS).addTo(map);
+    const color = accentColor();
+    markers.forEach(m => {
+      if (m.setStyle) m.setStyle({ fillColor: color });
+      if (m._badgeCount) m.setIcon(L.divIcon({
+        html: `<div style="font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem; color: #fff; background: ${color}; border-radius: 50%; width: 16px; height: 16px; display: flex; align-items: center; justify-content: center; font-weight: 700;">${m._badgeCount}</div>`,
+        iconSize: [16, 16], iconAnchor: [8, 8], className: "photo-count-badge"
+      }));
+    });
+    if (routeLine) routeLine.setStyle({ color });
+    arrows.forEach(a => map.removeLayer(a));
+    arrows = addArrows(uniqueCoords, color);
+  }).observe(document.body, { attributes: true, attributeFilter: ["class"] });
+}
+```
