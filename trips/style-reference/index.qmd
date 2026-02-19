@@ -537,7 +537,7 @@ esse cillam dolore eu fugiat nulla pariatur.
 
 ### Headings
 
-H1 is reserved for the page title. Here are H2 through H6, all in Space Grotesk bold.
+H1 is reserved for the page title. Here are H2 through H6, all in Fira Sans bold.
 To avoid breaking the page structure, these are shown as text samples rather than actual
 headings:
 
