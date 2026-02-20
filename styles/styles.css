@@ -433,7 +433,11 @@ body.quarto-dark .trip-map-label.leaflet-tooltip {
 }
 
 .photo-popup .carousel-caption {
-    bottom: 1.5rem !important;
+    bottom: auto !important;
+    top: 0.5rem;
+    left: auto !important;
+    right: 0.5rem !important;
+    transform: none;
     padding: 0.25rem 0.8rem !important;
     white-space: nowrap;
 }
