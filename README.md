@@ -67,18 +67,19 @@ The `group` attribute links photos together in the lightbox so you can navigate 
 
 ## Image Optimization
 
-Raw photos are automatically resized and compressed before the site builds. Drop originals into `_photos/<trip-slug>/` and the pre-render script handles the rest.
+Raw photos are automatically resized and compressed before the site builds. Drop originals into `original-photos/<trip-slug>/` and the pre-render script handles the rest.
 
 ```
-_photos/2025-07-iceland/hero.jpg      # Raw original (gitignored)
-  → trips/2025-07-iceland/hero.jpg    # Optimized JPEG (committed)
+original-photos/2025-07-iceland/hero.jpg   # Raw original (gitignored)
+  → trips/2025-07-iceland/hero.jpg         # Optimized JPEG (committed)
 ```
 
-- Max width: 1600px (aspect ratio preserved, no upscaling)
-- Format: JPEG quality 80, metadata stripped
+- Max width: 2000px (aspect ratio preserved, no upscaling)
+- Format: JPEG quality 85, metadata stripped
+- Extracts GPS coordinates and timestamps via `exiftool` into `photo-locations.json` for photo maps
 - Supports: jpg, jpeg, png, tiff, heic
 - Skips already-optimized files (based on modification time)
-- Requires [ImageMagick](https://imagemagick.org/): `brew install imagemagick`
+- Requires [ImageMagick](https://imagemagick.org/) and [ExifTool](https://exiftool.org/): `brew install imagemagick exiftool`
 
 The script runs automatically via Quarto's `pre-render` hook, or manually:
 

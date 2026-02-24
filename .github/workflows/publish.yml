@@ -23,9 +23,6 @@ jobs:
         with:
           version: release
 
-      - name: Install ImageMagick
-        run: sudo apt-get install -y imagemagick
-
       - name: Render
         uses: quarto-dev/quarto-actions/render@v2
 
