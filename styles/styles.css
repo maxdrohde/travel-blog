@@ -38,9 +38,6 @@
 
 .photo-grid img {
     cursor: pointer;
-}
-
-.photo-grid img {
     width: 100%;
     aspect-ratio: 3 / 2;
     object-fit: cover;
