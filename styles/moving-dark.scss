@@ -56,7 +56,7 @@ a {
 
 // Post meta text
 .metadata, .listing-date, .listing-author {
-    color: darken($body-color, 25%);
+    color: #a0a0a0;
     font-size: 1rem;
 }
 
@@ -93,7 +93,7 @@ pre, code {
 table {
     border-collapse: collapse;
     width: 100%;
-    color: darken($body-color, 10%);
+    color: #c6c6c6;
 
     th {
         background-color: #252525;
