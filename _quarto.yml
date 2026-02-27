@@ -2,6 +2,9 @@ project:
   type: website
   output-dir: _site
   pre-render: scripts/optimize-images.sh
+  render:
+    - index.qmd
+    - trips/**/*.qmd
 
 website:
   site-url: https://maxdrohde.github.io/travel-blog/

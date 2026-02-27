@@ -381,6 +381,14 @@ body.quarto-dark .trip-map-label.leaflet-tooltip {
     color: #bbb;
 }
 
+/* Photo map container */
+.photo-map {
+    height: 600px;
+    width: 100%;
+    border-radius: 3px;
+    margin: 2rem 0;
+}
+
 /* Photo map popup — image only, no bubble */
 .photo-popup.leaflet-popup .leaflet-popup-content-wrapper {
     background: transparent;

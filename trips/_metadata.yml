@@ -55,3 +55,224 @@ include-after-body:
       window.dispatchEvent(new Event("resize"));
     });
     </script>
+    <script>
+    (function() {
+      function initPhotoMap(mapEl, photoLocations) {
+        var TILE_URL = "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png";
+        var TILE_OPTS = {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
+          subdomains: "abcd",
+          maxZoom: 19
+        };
+        function isDark() { return document.body.classList.contains("quarto-dark"); }
+        function accentColor() { return isDark() ? "#d4845a" : "#c4653a"; }
+
+        var map = L.map(mapEl, { scrollWheelZoom: false, attributionControl: false });
+        L.tileLayer(TILE_URL, TILE_OPTS).addTo(map);
+
+        function formatDate(exifDate) {
+          var parts = exifDate.split(" ");
+          var dateParts = parts[0].split(":");
+          var timeParts = parts[1].split(":");
+          var y = dateParts[0], m = dateParts[1], d = dateParts[2];
+          var h = timeParts[0], min = timeParts[1];
+          var dt = new Date(+y, +m - 1, +d, +h, +min);
+          var month = dt.toLocaleString("en-US", { month: "short" });
+          var hour = dt.getHours() % 12 || 12;
+          var ampm = dt.getHours() < 12 ? "AM" : "PM";
+          return month + " " + (+d) + ", " + y + " \u00b7 " + hour + ":" + min + " " + ampm;
+        }
+
+        function badgeIconHtml(color, count) {
+          return '<div style="font-family: \'IBM Plex Mono\', monospace; font-size: 0.6rem; color: #fff; background: ' + color + '; border-radius: 50%; width: 16px; height: 16px; display: flex; align-items: center; justify-content: center; font-weight: 700;">' + count + '</div>';
+        }
+
+        function photoPopupHtml(photos, groupId) {
+          var cid = "mapCarousel-" + groupId;
+          var multi = photos.length > 1;
+          var indicators = "";
+          if (multi) {
+            indicators = '<div class="carousel-indicators">';
+            for (var i = 0; i < photos.length; i++) {
+              indicators += '<button type="button" data-bs-target="#' + cid + '" data-bs-slide-to="' + i + '"' + (i === 0 ? ' class="active"' : '') + '></button>';
+            }
+            indicators += '</div>';
+          }
+          var slides = "";
+          for (var i = 0; i < photos.length; i++) {
+            var loc = photos[i];
+            slides += '<div class="carousel-item' + (i === 0 ? ' active' : '') + '">';
+            slides += '<a href="' + loc.file + '" class="glightbox" data-gallery="map-' + groupId + '" data-description="' + (loc.date ? formatDate(loc.date) : '') + '" style="cursor: pointer;">';
+            slides += '<img src="' + loc.file + '" class="d-block w-100" style="height: 200px; object-fit: cover;" alt="">';
+            slides += '</a>';
+            if (loc.date) {
+              slides += '<div class="carousel-caption"><p>' + formatDate(loc.date) + '</p></div>';
+            }
+            slides += '</div>';
+          }
+          var controls = "";
+          if (multi) {
+            controls = '<button class="carousel-control-prev" type="button" data-bs-target="#' + cid + '" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>';
+            controls += '<button class="carousel-control-next" type="button" data-bs-target="#' + cid + '" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>';
+          }
+          return '<div id="' + cid + '" class="carousel slide" data-bs-ride="false" style="width: 280px; border-radius: 4px; overflow: hidden;">' + indicators + '<div class="carousel-inner">' + slides + '</div>' + controls + '</div>';
+        }
+
+        // Group photos by location (~10m precision)
+        var grouped = new Map();
+        for (var i = 0; i < photoLocations.length; i++) {
+          var loc = photoLocations[i];
+          var key = loc.lat.toFixed(4) + "," + loc.lon.toFixed(4);
+          if (!grouped.has(key)) grouped.set(key, { lat: loc.lat, lon: loc.lon, photos: [] });
+          grouped.get(key).photos.push(loc);
+        }
+
+        var markers = [];
+        var groupIdx = 0;
+        grouped.forEach(function(g) {
+          var count = g.photos.length;
+          var gid = groupIdx++;
+
+          // Invisible hit area for easier clicking
+          var hitArea = L.circleMarker([g.lat, g.lon], {
+            radius: 20, fillOpacity: 0, opacity: 0
+          }).addTo(map);
+
+          var marker = L.circleMarker([g.lat, g.lon], {
+            radius: count > 1 ? 8 : 6,
+            fillColor: accentColor(),
+            color: "#fff",
+            weight: 2,
+            fillOpacity: 0.9
+          }).addTo(map);
+
+          var popupContent = photoPopupHtml(g.photos, gid);
+          var popupOpts = {
+            minWidth: 50, maxWidth: 300, closeButton: false, className: "photo-popup"
+          };
+          marker.bindPopup(popupContent, popupOpts);
+          hitArea.bindPopup(popupContent, popupOpts);
+
+          function onPopupOpen() {
+            var carouselEl = document.getElementById("mapCarousel-" + gid);
+            if (carouselEl && typeof bootstrap !== "undefined") {
+              new bootstrap.Carousel(carouselEl, { ride: false, interval: false });
+            }
+            if (typeof GLightbox !== "undefined") {
+              GLightbox({ selector: '.glightbox[data-gallery="map-' + gid + '"]' });
+            }
+          }
+          marker.on("popupopen", onPopupOpen);
+          hitArea.on("popupopen", onPopupOpen);
+
+          if (count > 1) {
+            var badge = L.divIcon({
+              html: badgeIconHtml(accentColor(), count),
+              iconSize: [16, 16],
+              iconAnchor: [8, 8],
+              className: "photo-count-badge"
+            });
+            var badgeMarker = L.marker([g.lat, g.lon], { icon: badge, interactive: false }).addTo(map);
+            badgeMarker._badgeCount = count;
+            markers.push(badgeMarker);
+          }
+
+          markers.push(hitArea);
+          markers.push(marker);
+        });
+
+        var group = L.featureGroup(markers);
+        map.fitBounds(group.getBounds().pad(0.3));
+
+        // Route line + directional arrows
+        var uniqueCoords = [];
+        grouped.forEach(function(g) {
+          uniqueCoords.push([g.lat, g.lon]);
+        });
+
+        function addArrows(coords, color) {
+          var arrowMarkers = [];
+          for (var i = 0; i < coords.length - 1; i++) {
+            var from = map.latLngToLayerPoint(L.latLng(coords[i]));
+            var to = map.latLngToLayerPoint(L.latLng(coords[i + 1]));
+            var dx = to.x - from.x, dy = to.y - from.y;
+            var dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 40) continue;
+            var mid = L.point((from.x + to.x) / 2, (from.y + to.y) / 2);
+            var angle = Math.atan2(dy, dx) * 180 / Math.PI;
+            var midLatLng = map.layerPointToLatLng(mid);
+            var icon = L.divIcon({
+              html: '<svg width="18" height="18" viewBox="0 0 18 18" style="transform: rotate(' + angle + 'deg);"><path d="M 1 3 L 13 9 L 1 15 Z" fill="' + color + '" opacity="0.7"/></svg>',
+              iconSize: [18, 18],
+              iconAnchor: [9, 9],
+              className: "route-arrow"
+            });
+            arrowMarkers.push(L.marker(midLatLng, { icon: icon, interactive: false }).addTo(map));
+          }
+          return arrowMarkers;
+        }
+
+        var routeLine = null;
+        var arrows = [];
+        if (uniqueCoords.length > 1) {
+          routeLine = L.polyline(uniqueCoords, {
+            color: accentColor(),
+            weight: 2,
+            opacity: 0.4,
+            dashArray: "6 4"
+          }).addTo(map);
+          arrows = addArrows(uniqueCoords, accentColor());
+        }
+
+        map.on("zoomend moveend", function() {
+          if (uniqueCoords.length < 2) return;
+          arrows.forEach(function(a) { map.removeLayer(a); });
+          arrows = addArrows(uniqueCoords, accentColor());
+        });
+
+        // Dark mode observer
+        var wasDark = isDark();
+        new MutationObserver(function() {
+          var dark = isDark();
+          if (dark === wasDark) return;
+          wasDark = dark;
+          var color = accentColor();
+          markers.forEach(function(m) {
+            if (m.setStyle) m.setStyle({ fillColor: color });
+            if (m._badgeCount) m.setIcon(L.divIcon({
+              html: badgeIconHtml(color, m._badgeCount),
+              iconSize: [16, 16], iconAnchor: [8, 8], className: "photo-count-badge"
+            }));
+          });
+          if (routeLine) routeLine.setStyle({ color: color });
+          arrows.forEach(function(a) { map.removeLayer(a); });
+          arrows = addArrows(uniqueCoords, color);
+        }).observe(document.body, { attributes: true, attributeFilter: ["class"] });
+      }
+
+      document.addEventListener("DOMContentLoaded", function() {
+        var mapEl = document.querySelector(".photo-map");
+        if (!mapEl || typeof L === "undefined") return;
+
+        fetch("photo-locations.json")
+          .then(function(resp) { return resp.ok ? resp.json() : []; })
+          .catch(function() { return []; })
+          .then(function(photoLocations) {
+            if (!photoLocations || photoLocations.length === 0) {
+              mapEl.style.display = "none";
+              return;
+            }
+            if (mapEl.offsetWidth > 0) {
+              initPhotoMap(mapEl, photoLocations);
+            } else {
+              new IntersectionObserver(function(entries, obs) {
+                if (entries[0].isIntersecting) {
+                  obs.disconnect();
+                  initPhotoMap(mapEl, photoLocations);
+                }
+              }).observe(mapEl);
+            }
+          });
+      });
+    })();
+    </script>
